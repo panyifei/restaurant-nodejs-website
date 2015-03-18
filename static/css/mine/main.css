@@ -75,12 +75,29 @@
 .c-chosen{
     color: #18A689;
 }
-/*提交的模块*/
-.c-submit{
-    width: 70%;
-    left: 15%;
+
+/*固定在下面的东西*/
+.c-foot{
+    background-color: rgba(255,255,255,.9);
+    border-top: solid 1px #D1D2D2;
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+}
+.c-mine{
+    width: 80%;
+    left: 10%;
     position: relative;
+    margin: 10px 0;
+    font-size: 20px;
 }
-.c-submit button{
-    font-size: 24px;
-}
+
+/*.c-submit{*/
+/*margin-bottom: 70px;*/
+/*width: 70%;*/
+/*left: 15%;*/
+/*position: relative;*/
+/*}*/
+/*.c-submit button{*/
+/*font-size: 24px;*/
+/*}*/

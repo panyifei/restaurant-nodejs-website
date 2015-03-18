@@ -31,7 +31,13 @@ html(lang="en")
                             i.fa.fa-plus-square.j-plus
                     .c-choose
                         i.fa.fa-check-circle-o
-            .c-submit
-                button.btn.btn-primary.btn-block.m-t.j-submit
+        .c-foot
+            .j-mine
+                button.btn.btn-primary.c-mine.j-mine-btn
+                    |  已点的菜品
+            .j-submit(style="display: none;")
+                button.btn.btn-primary.j-submit-btn
                     |  提交
+                button.btn.btn-primary.j-back-btn
+                    |  返回
         script(src='js/mine/main.js')

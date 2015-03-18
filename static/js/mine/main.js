@@ -19,19 +19,30 @@ $('.j-plus').click(function () {
     $(this).siblings('input').val($(this).siblings('input').val()*1+1);
 });
 
-//提交
-$(".j-submit").click(function(){
-    $.ajax({
-        type: "post",
-        url: "addOrder",
-        data: {
-            telephone: '13121310'
-        },
-        success: function () {
-            //toastr.success('统计状态修改成功');
-        },
-        error: function () {
-            //toastr.error('发生错误');
-        }
-    });
+//点击我的
+$('.j-mine-btn').click(function(){
+    $('.j-mine').toggle();
+    $('.j-submit').toggle();
 });
+//点击返回
+$('.j-back-btn').click(function(){
+    $('.j-mine').toggle();
+    $('.j-submit').toggle();
+});
+
+////提交
+//$(".j-submit").click(function(){
+//    $.ajax({
+//        type: "post",
+//        url: "addOrder",
+//        data: {
+//            telephone: '13121310'
+//        },
+//        success: function () {
+//            //toastr.success('统计状态修改成功');
+//        },
+//        error: function () {
+//            //toastr.error('发生错误');
+//        }
+//    });
+//});
