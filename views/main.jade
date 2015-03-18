@@ -1,0 +1,37 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="initial-scale=1, maximum-scale=1, user-scalable=no")
+        title Document
+        link(href="css/bootstrap.min.css", rel="stylesheet")
+        link(href="font-awesome/css/font-awesome.css", rel="stylesheet")
+        link(href="css/animate.css", rel="stylesheet")
+        link(href="css/style.css", rel="stylesheet")
+        link(href="css/mine/main.css", rel="stylesheet")
+        script(src='js/jquery-1.10.2.js')
+        script(src="js/bootstrap.min.js")
+
+    body(style="background-color: #F3F3F4;")
+        .row.white-bg.c-head
+            .c-header
+                h2 菜谱
+        .row.white-bg.c-lists
+            for menu in menus
+                .c-item.clearfix.j-item
+                    .c-picture
+                        img.c-img(src="http://pic4.nipic.com/20090728/3135030_132238077_2.jpg")
+                    .c-food
+                        h2 #{menu.name}
+                        h4 ￥#{menu.price}/份
+                        h3.j-des #{menu.description}
+                        .c-num.j-num.hide
+                            i.fa.fa-minus-square.j-minus
+                            input(type="num", name="num", value=1)
+                            i.fa.fa-plus-square.j-plus
+                    .c-choose
+                        i.fa.fa-check-circle-o
+            .c-submit
+                button.btn.btn-primary.btn-block.m-t.j-submit
+                    |  提交
+        script(src='js/mine/main.js')

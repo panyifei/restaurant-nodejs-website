@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panyifei/nodejs-restaurant.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "panyifei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/panyifei/nodejs-restaurant/issues"
+  },
+  "homepage": "https://github.com/panyifei/nodejs-restaurant",
+  "dependencies": {
+    "express": "^4.12.2",
+    "jade": "^1.9.2",
+    "knex": "^0.7.6",
+    "mysql": "^2.5.5"
+  }
+}

@@ -1,0 +1,86 @@
+/*头部*/
+.c-head{
+    color: #fff;
+    height: 66px;
+    background-color: #18A689;
+    border-bottom: 1px solid #D1D2D2;
+}
+.c-header{
+    margin-left: 30px;
+}
+
+/*整个下面部分*/
+.c-lists{
+    margin-top: 14px;
+}
+/*外面的框*/
+.c-item{
+    border-bottom: 1px solid #D1D2D2;
+}
+/*分三块*/
+.c-picture{
+    float: left;
+    height: 150px;
+    width: 120px;
+}
+.c-img{
+    height: 140px;
+    width: 120px;
+    top: 5px;
+    position: relative;
+}
+/*第二块*/
+.c-food{
+    float: left;
+    width: 139px;
+}
+.c-food h2{
+    margin-left: 9px;
+}
+.c-food h4{
+    font-size: 15px;
+    position: relative;
+    left: 57px;
+    color: #ff9933;
+}
+.c-food h3{
+    margin-left: 13px;
+    line-height: 30px;
+}
+
+.c-num{
+    float: left;
+    margin-left: 13px;
+    font-size: 28px;
+}
+.c-num input{
+    width: 42px;
+    height: 46px;
+    margin-left: 9px;
+    margin-right: 9px;
+    padding-left: 10px;
+}
+.c-num h2{
+    position: relative;
+    left: 11px;
+}
+/*第三块*/
+.c-choose{
+    float: left;
+    font-size: 57px;
+    margin-top: 34px;
+    margin-left: 10px;
+    color: #D1D2D2;
+}
+.c-chosen{
+    color: #18A689;
+}
+/*提交的模块*/
+.c-submit{
+    width: 70%;
+    left: 15%;
+    position: relative;
+}
+.c-submit button{
+    font-size: 24px;
+}
