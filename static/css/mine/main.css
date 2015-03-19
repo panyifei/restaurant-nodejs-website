@@ -84,11 +84,25 @@
     position: fixed;
     bottom: 0px;
 }
-.c-mine{
+.c-mine-btn{
     width: 80%;
     left: 10%;
     position: relative;
     margin: 10px 0;
+    font-size: 20px;
+}
+.c-submit-btn{
+    width: 40%;
+    position: relative;
+    left: 10%;
+    margin: 10px 0;
+    font-size: 20px;
+}
+.c-back-btn{
+    margin: 10px 0;
+    width: 40%;
+    position: relative;
+    left: 15%;
     font-size: 20px;
 }
 

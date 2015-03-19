@@ -10,24 +10,24 @@ $('.j-minus').click(function () {
     if($(this).siblings('input').val()==1){
         return;
     }
-    $(this).siblings('input').val($(this).siblings('input').val()-1);
+    $(this).siblings('input').attr("value",$(this).siblings('input').attr("value")-1);
 });
 $('.j-plus').click(function () {
     if($(this).siblings('input').val()==9){
         return;
     }
-    $(this).siblings('input').val($(this).siblings('input').val()*1+1);
+    $(this).siblings('input').attr("value",$(this).siblings('input').attr("value")*1+1);
 });
 
-//点击我的
-$('.j-mine-btn').click(function(){
+//点击已点的菜品,点击返回
+$('.j-mine-btn,.j-back-btn').click(function(){
     $('.j-mine').toggle();
     $('.j-submit').toggle();
-});
-//点击返回
-$('.j-back-btn').click(function(){
-    $('.j-mine').toggle();
-    $('.j-submit').toggle();
+    $('.j-lists').toggle();
+    $('.j-orders').toggle();
+    if($(this).hasClass("j-mine-btn")){
+
+    }
 });
 
 ////提交

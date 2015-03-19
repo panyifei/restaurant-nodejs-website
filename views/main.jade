@@ -17,27 +17,30 @@ html(lang="en")
             .c-header
                 h2 菜谱
         .row.white-bg.c-lists
-            for menu in menus
-                .c-item.clearfix.j-item
-                    .c-picture
-                        img.c-img(src="http://pic4.nipic.com/20090728/3135030_132238077_2.jpg")
-                    .c-food
-                        h2 #{menu.name}
-                        h4 ￥#{menu.price}/份
-                        h3.j-des #{menu.description}
-                        .c-num.j-num.hide
-                            i.fa.fa-minus-square.j-minus
-                            input(type="num", name="num", value=1)
-                            i.fa.fa-plus-square.j-plus
-                    .c-choose
-                        i.fa.fa-check-circle-o
+            .j-lists
+                for menu in menus
+                    .c-item.clearfix.j-item
+                        .c-picture
+                            img.c-img(src="http://pic4.nipic.com/20090728/3135030_132238077_2.jpg")
+                        .c-food
+                            h2 #{menu.name}
+                            h4 ￥#{menu.price}/份
+                            h3.j-des #{menu.description}
+                            .c-num.j-num.hide
+                                i.fa.fa-minus-square.j-minus
+                                input(type="num", name="num", value=1)
+                                i.fa.fa-plus-square.j-plus
+                        .c-choose
+                            i.fa.fa-check-circle-o
+            .j-orders(style="display: none;")
+
         .c-foot
             .j-mine
-                button.btn.btn-primary.c-mine.j-mine-btn
+                button.btn.btn-primary.c-mine-btn.j-mine-btn
                     |  已点的菜品
             .j-submit(style="display: none;")
-                button.btn.btn-primary.j-submit-btn
+                button.btn.btn-primary.j-submit-btn.c-submit-btn
                     |  提交
-                button.btn.btn-primary.j-back-btn
+                button.btn.btn-primary.j-back-btn.c-back-btn
                     |  返回
         script(src='js/mine/main.js')
