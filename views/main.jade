@@ -26,7 +26,10 @@ html(lang="en")
                             img.c-img(src="http://pic4.nipic.com/20090728/3135030_132238077_2.jpg")
                         .c-food
                             h2 #{menu.name}
-                            h4 ￥#{menu.price}/份
+                            h4
+                                span ￥
+                                span.j-price #{menu.price}
+                                span /份
                             h3.j-des #{menu.description}
                             .c-num.j-num.hide
                                 i.fa.fa-minus-square.j-minus
@@ -46,4 +49,5 @@ html(lang="en")
                     |  提交
                 button.btn.btn-primary.j-back-btn.c-back-btn
                     |  返回
+        .c-
         script(src='js/mine/main.js')

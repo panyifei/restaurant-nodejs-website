@@ -41,12 +41,30 @@ $('.j-mine-btn,.j-back-btn').click(function(){
 
 //提交
 $(".j-submit").click(function(){
-    var order = $('.j-orders .j-item').
+    var length = $('.j-orders .j-item').length;
+    var i = 0;
+    var menus = "";
+    var total = 0;
+    while(i<length){
+        menus += $($('.j-orders .j-item')[i]).data("id")+"@";
+        var num = $($('.j-orders .j-item')[i]).find("input").attr("value");
+        menus += num;
+        var price = $($('.j-orders .j-item')[i]).find(".j-price").text();
+        total =  total * 1 + num * price;
+        if(i != length-1){
+            menus += "/";
+        }
+        i++;
+    }
+    //menus是具体的点餐的东西，形式是1@1/2@1
+
     $.ajax({
         type: "post",
-        url: "addOrder",
+        url: "ajax/addOrder",
         data: {
-            telephone: '13121310'
+            telephone: '13121310',
+            menus:menus,
+            total:total
         },
         success: function () {
             //toastr.success('统计状态修改成功');
