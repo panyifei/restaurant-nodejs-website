@@ -15,11 +15,13 @@ html(lang="en")
     body(style="background-color: #F3F3F4;")
         .row.white-bg.c-head
             .c-header
-                h2 菜谱
+                h2.j-lists-header 菜谱
+                h2.j-orders-header(style="display: none;") 已点
         .row.white-bg.c-lists
+            //这里是放菜单的
             .j-lists
                 for menu in menus
-                    .c-item.clearfix.j-item
+                    .c-item.clearfix.j-item(data-id="#{menu.id}")
                         .c-picture
                             img.c-img(src="http://pic4.nipic.com/20090728/3135030_132238077_2.jpg")
                         .c-food
@@ -30,8 +32,9 @@ html(lang="en")
                                 i.fa.fa-minus-square.j-minus
                                 input(type="num", name="num", value=1)
                                 i.fa.fa-plus-square.j-plus
-                        .c-choose
+                        .c-choose.j-choose
                             i.fa.fa-check-circle-o
+            //这里是放订单的
             .j-orders(style="display: none;")
 
         .c-foot
