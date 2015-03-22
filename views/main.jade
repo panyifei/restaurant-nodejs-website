@@ -16,7 +16,7 @@ html(lang="en")
         .row.white-bg.c-head
             .c-header
                 h2.j-lists-header 菜谱
-                h2.j-orders-header(style="display: none;") 已点
+                h2.j-orders-header.hide 已点
         .row.white-bg.c-lists
             //这里是放菜单的
             .j-lists
@@ -38,16 +38,17 @@ html(lang="en")
                         .c-choose.j-choose
                             i.fa.fa-check-circle-o
             //这里是放订单的
-            .j-orders(style="display: none;")
+            .j-orders.hide
 
         .c-foot
             .j-mine
                 button.btn.btn-primary.c-mine-btn.j-mine-btn
                     |  已点的菜品
-            .j-submit(style="display: none;")
+            .j-submit.hide
                 button.btn.btn-primary.j-submit-btn.c-submit-btn
                     |  提交
                 button.btn.btn-primary.j-back-btn.c-back-btn
                     |  返回
-        .c-
+        .c-tip.j-tip.hide
+            h2 订单提交成功！
         script(src='js/mine/main.js')

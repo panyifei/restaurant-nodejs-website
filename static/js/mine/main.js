@@ -19,12 +19,12 @@ $('.j-plus').click(function () {
 
 //点击已点的菜品,点击返回
 $('.j-mine-btn,.j-back-btn').click(function(){
-    $('.j-mine').toggle();
-    $('.j-submit').toggle();
-    $('.j-lists').toggle();
-    $('.j-orders').toggle();
-    $('.j-lists-header').toggle();
-    $('.j-orders-header').toggle();
+    $('.j-mine').toggleClass('hide');
+    $('.j-submit').toggleClass('hide');
+    $('.j-lists').toggleClass('hide');
+    $('.j-orders').toggleClass('hide');
+    $('.j-lists-header').toggleClass('hide');
+    $('.j-orders-header').toggleClass('hide');
     if($(this).hasClass("j-mine-btn")){
         $(".j-orders").empty();
         $(".j-orders").append($('.c-chosen').parents('.j-item').clone(true));
@@ -39,8 +39,13 @@ $('.j-mine-btn,.j-back-btn').click(function(){
     }
 });
 
+//控制提示的显示消失
+$('.j-tip').click(function(){
+    $(this).addClass('hide');
+});
+
 //提交
-$(".j-submit").click(function(){
+$(".j-submit-btn").click(function(){
     var length = $('.j-orders .j-item').length;
     var i = 0;
     var menus = "";
@@ -66,8 +71,9 @@ $(".j-submit").click(function(){
             menus:menus,
             total:total
         },
-        success: function () {
-            //toastr.success('统计状态修改成功');
+        success: function (res) {
+            $('.j-tip h2').text(res);
+            $('.j-tip').removeClass('hide');
         },
         error: function () {
             //toastr.error('发生错误');

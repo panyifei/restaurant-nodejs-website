@@ -25,18 +25,23 @@ app.post("/ajax/addOrder",function(req,res){
     var telephone = req.body.telephone;
     var definition = req.body.menus;
     var total = req.body.total;
-    db("order")
-        .insert({
-            telephone:telephone,
-            addTime: new Date,
-            definition: definition,
-            total:total,
-            status:1
-        })
-        .exec(function(){
-            res.send(200, "已经成功插入数据");
-        });
+    //这里需要判断一下是否点了，还有1个小时内只准点一次
 
+    if(total==0){
+        res.send(200, "对不起，请至少点一份~");
+    }else {
+        db("order")
+            .insert({
+                telephone: telephone,
+                addTime: new Date,
+                definition: definition,
+                total: total,
+                status: 1
+            })
+            .exec(function () {
+                res.send(200, "已经成功提交订单~");
+            });
+    }
 
 });
 

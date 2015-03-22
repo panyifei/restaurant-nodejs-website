@@ -106,12 +106,16 @@
     font-size: 20px;
 }
 
-/*.c-submit{*/
-/*margin-bottom: 70px;*/
-/*width: 70%;*/
-/*left: 15%;*/
-/*position: relative;*/
-/*}*/
-/*.c-submit button{*/
-/*font-size: 24px;*/
-/*}*/
+/*用来提示的东西*/
+.c-tip{
+    padding: 31px;
+    color: #fff;
+    width: 50%;
+    position: fixed;
+    height: 30%;
+    left: 25%;
+    top: 25%;
+    background-color: #33cc99;
+    border-radius: 10px;
+    box-shadow: 3px 3px 13px #888888;;
+}
