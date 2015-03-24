@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 //主页面
+//肉菜为1，素菜为2，饮品为3，小吃为4
 app.get('/main', function(req, res){
     var menus = db.select().table('menu').exec(function(){
         menus = menus._settledValue;

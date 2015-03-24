@@ -1,17 +1,35 @@
 /*头部*/
 .c-head{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
     color: #fff;
-    height: 66px;
+    height: 65px;
     background-color: #18A689;
     border-bottom: 1px solid #D1D2D2;
 }
 .c-header{
-    margin-left: 30px;
+    padding-left: 30px;
 }
+
 
 /*整个下面部分*/
 .c-lists{
-    margin-top: 14px;
+    margin-top: 65px;
+}
+/*放种类的*/
+.c-kinds{
+    background-color: #15B594;
+    line-height: 50px;
+    font-size: 24px;
+    color: #fff;
+    padding-left: 41px;
+}
+.c-kinds>span+span:before{
+    padding: 0 10px;
+    color: #ccc;
+    content: "|";
 }
 /*外面的框*/
 .c-item{
@@ -108,7 +126,7 @@
 
 /*用来提示的东西*/
 .c-tip{
-    padding: 31px;
+    padding: 13px 27px;
     color: #fff;
     width: 50%;
     position: fixed;

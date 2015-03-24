@@ -13,11 +13,19 @@ html(lang="en")
         script(src="js/bootstrap.min.js")
 
     body(style="background-color: #F3F3F4;")
-        .row.white-bg.c-head
+        .c-head
             .c-header
-                h2.j-lists-header 菜谱
-                h2.j-orders-header.hide 已点
+                .j-lists-header
+                    h2 菜谱
+                .j-orders-header.hide
+                    h2 已点
+
         .row.white-bg.c-lists
+            .c-kinds
+                span 荤菜
+                span 素菜
+                span 饮品
+                span 小吃
             //这里是放菜单的
             .j-lists
                 for menu in menus
