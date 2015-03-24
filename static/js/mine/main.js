@@ -3,6 +3,20 @@ $('.j-choose').click(function () {
     $(this).find("i").toggleClass("c-chosen");
 });
 
+//选择某个种类
+$('.c-kinds span').click(function(){
+    //改变选中的样式
+    if($(this).hasClass('c-chosen-kind')) return;
+    $(this).addClass("c-chosen-kind").siblings('span').removeClass('c-chosen-kind');
+    var kind = $(this).attr("data-kind");
+    if(kind == 0){
+        $(".j-item").removeClass('hide');
+        return;
+    }
+    $(".j-item[data-kind!='"+kind+"']").addClass('hide');
+    $(".j-item[data-kind='"+kind+"']").removeClass('hide');
+});
+
 //加号，减号
 $('.j-minus').click(function () {
     if($(this).siblings('input').val()==1){
@@ -25,10 +39,12 @@ $('.j-mine-btn,.j-back-btn').click(function(){
     $('.j-orders').toggleClass('hide');
     $('.j-lists-header').toggleClass('hide');
     $('.j-orders-header').toggleClass('hide');
+    $('.j-kinds').toggleClass('hide');
     if($(this).hasClass("j-mine-btn")){
         $(".j-orders").empty();
         $(".j-orders").append($('.c-chosen').parents('.j-item').clone(true));
         //这里显示和添加数量
+        $('.j-orders .j-item').removeClass('hide');
         $('.j-orders .j-item').find('.j-num').toggleClass("hide");
         $('.j-orders .j-item').find('.j-des').toggleClass("hide");
         $('.j-orders .j-choose').click(function(){

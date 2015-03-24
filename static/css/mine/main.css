@@ -22,14 +22,18 @@
 .c-kinds{
     background-color: #15B594;
     line-height: 50px;
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
-    padding-left: 41px;
+    padding-left: 25px;
 }
 .c-kinds>span+span:before{
     padding: 0 10px;
     color: #ccc;
     content: "|";
+}
+.c-chosen-kind{
+    color: #8FEF36;
+    font-size: 23px;
 }
 /*外面的框*/
 .c-item{
@@ -109,14 +113,14 @@
     margin: 10px 0;
     font-size: 20px;
 }
-.c-submit-btn{
+.c-first-btn{
     width: 40%;
     position: relative;
     left: 10%;
     margin: 10px 0;
     font-size: 20px;
 }
-.c-back-btn{
+.c-second-btn{
     margin: 10px 0;
     width: 40%;
     position: relative;

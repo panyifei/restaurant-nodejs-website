@@ -18,18 +18,19 @@ html(lang="en")
                 .j-lists-header
                     h2 菜谱
                 .j-orders-header.hide
-                    h2 已点
+                    h2 已选
 
         .row.white-bg.c-lists
-            .c-kinds
-                span 荤菜
-                span 素菜
-                span 饮品
-                span 小吃
+            .c-kinds.j-kinds
+                span.c-chosen-kind(data-kind="0") 全部
+                span(data-kind="1") 荤菜
+                span(data-kind="2") 素菜
+                span(data-kind="3") 饮品
+                span(data-kind="4") 小吃
             //这里是放菜单的
             .j-lists
                 for menu in menus
-                    .c-item.clearfix.j-item(data-id="#{menu.id}")
+                    .c-item.clearfix.j-item(data-id="#{menu.id}",data-kind="#{menu.kind}")
                         .c-picture
                             img.c-img(src="http://pic4.nipic.com/20090728/3135030_132238077_2.jpg")
                         .c-food
@@ -50,12 +51,14 @@ html(lang="en")
 
         .c-foot
             .j-mine
-                button.btn.btn-primary.c-mine-btn.j-mine-btn
-                    |  已点的菜品
+                button.btn.btn-primary.c-first-btn.j-mine-btn
+                    |  已选的菜品
+                button.btn.btn-primary.c-second-btn.j-orders-btn
+                    |  订单
             .j-submit.hide
-                button.btn.btn-primary.j-submit-btn.c-submit-btn
+                button.btn.btn-primary.c-first-btn.j-submit-btn
                     |  提交
-                button.btn.btn-primary.j-back-btn.c-back-btn
+                button.btn.btn-primary.c-second-btn.j-back-btn
                     |  返回
         .c-tip.j-tip.hide
             h2 订单提交成功！
