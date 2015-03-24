@@ -39,7 +39,7 @@ app.post("/ajax/addOrder",function(req,res){
                 status: 1
             })
             .exec(function () {
-                res.send(200, "已经成功提交订单~");
+                res.send(200, "已经成功提交~"+"您的消费金额为"+total);
             });
     }
 
