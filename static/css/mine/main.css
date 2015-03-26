@@ -127,6 +127,9 @@
     left: 15%;
     font-size: 20px;
 }
+.c-only-btn{
+
+}
 
 /*用来提示的东西*/
 .c-tip{
@@ -140,4 +143,10 @@
     background-color: #33cc99;
     border-radius: 10px;
     box-shadow: 3px 3px 13px #888888;;
+}
+.c-back-btn{
+    width: 70%;
+    position: relative;
+    left: 15%;
+    font-size: 20px;
 }

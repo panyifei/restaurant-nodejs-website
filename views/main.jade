@@ -47,18 +47,18 @@ html(lang="en")
                             i.fa.fa-check-circle-o
             //这里是放订单的
             .j-orders.hide
-
+            .j-submit.hide
+                button.btn.btn-primary.c-first-btn.j-submit-btn
+                    |  提交
         .c-foot
             .j-mine
                 button.btn.btn-primary.c-first-btn.j-mine-btn
                     |  已选的菜品
                 button.btn.btn-primary.c-second-btn.j-orders-btn
                     |  订单
-            .j-submit.hide
-                button.btn.btn-primary.c-first-btn.j-submit-btn
-                    |  提交
-                button.btn.btn-primary.c-second-btn.j-back-btn
-                    |  返回
+
         .c-tip.j-tip.hide
             h2 订单提交成功！
+            button.btn.btn-primary.c-back-btn.j-back-btn
+                |  返回
         script(src='js/mine/main.js')
