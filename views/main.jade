@@ -27,7 +27,7 @@ html(lang="en")
                 span(data-kind="3") 饮品
                 span(data-kind="4") 主食
             //这里是放菜单的
-            .j-lists
+            .j-show-lists
                 for menu in menus
                     .c-item.clearfix.j-item(data-id="#{menu.id}",data-kind="#{menu.kind}")
                         .c-picture
@@ -46,10 +46,11 @@ html(lang="en")
                         .c-choose.j-choose
                             i.fa.fa-check-circle-o
             //这里是放订单的
-            .j-orders.hide
-            .j-submit.hide
-                button.btn.btn-primary.c-first-btn.j-submit-btn
-                    |  提交
+            .j-show-orders.hide
+                .j-orders
+                .j-submit
+                    button.btn.btn-primary.c-only-btn.j-submit-btn
+                        |  提交
         .c-foot
             .j-mine
                 button.btn.btn-primary.c-first-btn.j-mine-btn

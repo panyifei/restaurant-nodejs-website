@@ -33,10 +33,10 @@ $('.j-plus').click(function () {
 
 //点击已点的菜品,点击返回
 $('.j-mine-btn,.j-back-btn').click(function(){
-    $('.j-mine').toggleClass('hide');
-    $('.j-submit').toggleClass('hide');
-    $('.j-lists').toggleClass('hide');
-    $('.j-orders').toggleClass('hide');
+    //$('.j-mine').toggleClass('hide');
+    //$('.j-submit').toggleClass('hide');
+    $('.j-show-lists').toggleClass('hide');
+    $('.j-show-orders').toggleClass('hide');
     $('.j-lists-header').toggleClass('hide');
     $('.j-orders-header').toggleClass('hide');
     $('.j-kinds').toggleClass('hide');
