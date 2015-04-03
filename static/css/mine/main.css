@@ -113,20 +113,6 @@
     margin: 10px 0;
     font-size: 20px;
 }
-.c-first-btn{
-    width: 40%;
-    position: relative;
-    left: 10%;
-    margin: 10px 0;
-    font-size: 20px;
-}
-.c-second-btn{
-    margin: 10px 0;
-    width: 40%;
-    position: relative;
-    left: 15%;
-    font-size: 20px;
-}
 .c-only-btn{
     width: 48%;
     position: relative;
@@ -134,7 +120,17 @@
     margin: 10px 0;
     font-size: 20px;
 }
-
+.c-foot-i{
+    font-size: 30px;
+}
+.c-foot-div{
+    margin: 10px 0 5px 0;
+    display: inline-block;
+    width: 25%;
+}
+.c-foot-chosen{
+    color: #18A689;
+}
 /*用来提示的东西*/
 .c-tip{
     padding: 13px 27px;

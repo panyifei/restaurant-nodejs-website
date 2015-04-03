@@ -31,15 +31,11 @@ $('.j-plus').click(function () {
     $(this).siblings('input').attr("value",$(this).siblings('input').attr("value")*1+1);
 });
 
-//点击已点的菜品,点击返回
-$('.j-mine-btn,.j-back-btn').click(function(){
-    //$('.j-mine').toggleClass('hide');
-    //$('.j-submit').toggleClass('hide');
-    $('.j-show-lists').toggleClass('hide');
-    $('.j-show-orders').toggleClass('hide');
-    $('.j-lists-header').toggleClass('hide');
-    $('.j-orders-header').toggleClass('hide');
-    $('.j-kinds').toggleClass('hide');
+//点击已选
+$('.j-chosen-foot').click(function(){
+    $(this).addClass('c-foot-chosen').siblings().removeClass('c-foot-chosen');
+    $('.j-show-chosen').removeClass('hide').siblings().addClass('hide');
+    $('.j-chosen-header').removeClass('hide').siblings().addClass('hide');
     if($(this).hasClass("j-mine-btn")){
         $(".j-orders").empty();
         $(".j-orders").append($('.c-chosen').parents('.j-item').clone(true));
@@ -54,6 +50,21 @@ $('.j-mine-btn,.j-back-btn').click(function(){
         });
     }
 });
+
+//点击主页
+$('.j-main-foot').click(function(){
+    $(this).addClass('c-foot-chosen').siblings().removeClass('c-foot-chosen');
+    $('.j-show-lists').removeClass('hide').siblings().addClass('hide');
+    $('.j-lists-header').removeClass('hide').siblings().addClass('hide');
+});
+
+//点击我的
+$('.j-mine-foot').click(function(){
+    $(this).addClass('c-foot-chosen').siblings().removeClass('c-foot-chosen');
+    $('.j-show-mine').removeClass('hide').siblings().addClass('hide');
+    $('.j-lists-header').removeClass('hide').siblings().addClass('hide');
+});
+
 
 //控制提示的显示消失
 $('.j-tip').click(function(){

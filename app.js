@@ -15,9 +15,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/main', function(req, res){
     var menus = db.select().table('menu').exec(function(){
         menus = menus._settledValue;
-        res.render("main", {
-            menus:menus
+
+        var users = db('user').where('id', 1).exec(function(){
+            users = users._settledValue;
+            console.log(users);
+            res.render("main", {
+                menus:menus,
+                users:users
+            });
         });
+
     });
 });
 
