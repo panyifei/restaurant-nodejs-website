@@ -12,7 +12,13 @@
 .c-header{
     padding-left: 30px;
 }
-
+.c-lists-header span{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 18px;
+    box-shadow: 3px 3px 11px #888888;;
+}
 
 /*整个下面部分*/
 .c-lists{
@@ -131,7 +137,7 @@
 .c-foot-chosen{
     color: #18A689;
 }
-/*用来提示的东西*/
+/*用来提示的东西,包括活动*/
 .c-tip{
     padding: 13px 27px;
     color: #fff;
@@ -142,11 +148,23 @@
     top: 25%;
     background-color: #33cc99;
     border-radius: 10px;
-    box-shadow: 3px 3px 13px #888888;;
+    box-shadow: 3px 3px 13px #888888;
 }
-.c-back-btn{
+
+.c-activity{
+    padding: 13px 27px;
+    color: #fff;
     width: 70%;
-    position: relative;
+    position: fixed;
+    height: 65%;
     left: 15%;
-    font-size: 20px;
+    top: 18%;
+    background-color: #33cc99;
+    border-radius: 10px;
+    box-shadow: 3px 3px 13px #888888;
+}
+.c-activity span{
+    position: absolute;
+    right: 15px;
+    top: 10px;
 }

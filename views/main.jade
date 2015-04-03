@@ -15,8 +15,9 @@ html(lang="en")
     body(style="background-color: #F3F3F4;")
         .c-head
             .c-header
-                .j-lists-header
+                .j-lists-header.c-lists-header
                     h2 菜谱
+                    span.btn.btn-primary.j-activity-btn 活动
                 .j-chosen-header.hide
                     h2 已选
                 .j-mine-header.hide
@@ -57,7 +58,11 @@ html(lang="en")
 
             .j-show-mine.hide
                 for user in users
-                    #{user.telephone}
+                    .user-info
+                        img.c-img(src="http://pic4.nipic.com/20090728/3135030_132238077_2.jpg")
+                        h2 #{user.telephone}
+                        h3 #{user.creditnow}
+                        h3 #{user.creditall}
         .c-foot
             .j-main-foot.c-foot-div.c-foot-chosen
                 div.text-center
@@ -88,6 +93,11 @@ html(lang="en")
 
         .c-tip.j-tip.hide
             h2 订单提交成功！
-            button.btn.btn-primary.c-back-btn.j-back-btn
-                |  返回
+        .c-activity.j-activity
+            span
+                i.fa.fa-times.c-foot-i
+            h2 今日活动
+            for activity in activitys
+                h3 #{activity.subject}
+                h4 #{activity.detail}
         script(src='js/mine/main.js')

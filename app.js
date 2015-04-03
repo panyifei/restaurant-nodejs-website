@@ -18,11 +18,17 @@ app.get('/main', function(req, res){
 
         var users = db('user').where('id', 1).exec(function(){
             users = users._settledValue;
-            console.log(users);
-            res.render("main", {
-                menus:menus,
-                users:users
+
+            var activitys = db.select().table('activity').exec(function(){
+                activitys = activitys._settledValue;
+
+                res.render("main", {
+                    menus:menus,
+                    users:users,
+                    activitys:activitys
+                });
             });
+
         });
 
     });

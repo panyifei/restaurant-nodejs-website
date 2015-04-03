@@ -62,14 +62,21 @@ $('.j-main-foot').click(function(){
 $('.j-mine-foot').click(function(){
     $(this).addClass('c-foot-chosen').siblings().removeClass('c-foot-chosen');
     $('.j-show-mine').removeClass('hide').siblings().addClass('hide');
-    $('.j-lists-header').removeClass('hide').siblings().addClass('hide');
+    $('.j-mine-header').removeClass('hide').siblings().addClass('hide');
 });
 
 
-//控制提示的显示消失
+//控制提示以及活动的显示消失
 $('.j-tip').click(function(){
     $(this).addClass('hide');
 });
+$('.j-activity span').click(function(){
+    $(this).parents('.j-activity').addClass('hide');
+});
+$('.j-activity-btn').click(function(){
+    $('.j-activity').removeClass('hide');
+});
+
 
 //提交
 $(".j-submit-btn").click(function(){
