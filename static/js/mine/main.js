@@ -1,6 +1,14 @@
 //选择某一个菜品的按钮
-$('.j-choose').click(function () {
-    $(this).find("i").toggleClass("c-chosen");
+$('.j-choose i').click(function () {
+    if($(this).hasClass('c-chosen')){
+        $(this).removeClass('c-chosen');
+    }else{
+        if($(this).siblings().hasClass('c-chosen')){
+            $(this).addClass('c-chosen').siblings().removeClass('c-chosen');
+        }else{
+            $(this).addClass('c-chosen');
+        }
+    }
 });
 
 //选择某个种类
@@ -36,19 +44,25 @@ $('.j-chosen-foot').click(function(){
     $(this).addClass('c-foot-chosen').siblings().removeClass('c-foot-chosen');
     $('.j-show-chosen').removeClass('hide').siblings().addClass('hide');
     $('.j-chosen-header').removeClass('hide').siblings().addClass('hide');
-    if($(this).hasClass("j-mine-btn")){
-        $(".j-orders").empty();
-        $(".j-orders").append($('.c-chosen').parents('.j-item').clone(true));
-        //这里显示和添加数量
-        $('.j-orders .j-item').removeClass('hide');
-        $('.j-orders .j-item').find('.j-num').toggleClass("hide");
-        $('.j-orders .j-item').find('.j-des').toggleClass("hide");
-        $('.j-orders .j-choose').click(function(){
-            var id =  $(this).parents('.j-item').attr("data-id");
-            $(this).parents('.j-item').remove();
-            $("[data-id='"+id+"']").find(".j-choose").click();
-        });
+
+    $(".j-orders").empty();
+    $(".j-orders").append($('.c-chosen').parents('.j-item').clone(true));
+    //这里显示和添加数量
+    $('.j-orders .j-item').removeClass('hide');
+    $('.j-orders .j-item').find('.c-chosen').siblings().remove();
+    var allitems = $('.j-orders .j-item').find('.c-chosen');
+    for(var i = 0;i < allitems.length;i++){
+        if($(allitems.get(i)).hasClass('j-use-credit')===false){
+            $(allitems.get(i)).parents('.j-item').find('.j-num').toggleClass("hide");
+        }
     }
+
+    $('.j-orders .j-choose').click(function(){
+        var id =  $(this).parents('.j-item').attr("data-id");
+        $(this).parents('.j-item').remove();
+        $("[data-id='"+id+"']").find(".j-choose").click();
+    });
+
 });
 
 //点击主页

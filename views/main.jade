@@ -38,17 +38,16 @@ html(lang="en")
                             img.c-img(src="http://pic4.nipic.com/20090728/3135030_132238077_2.jpg")
                         .c-food
                             h2 #{menu.name}
-                            h4
-                                span ￥
-                                span.j-price #{menu.price}
-                                span /份
-                            h3.j-des #{menu.description}
+                            h3 #{menu.description}
                             .c-num.j-num.hide
                                 i.fa.fa-minus-square.j-minus
                                 input(type="num", name="num", value=1)
                                 i.fa.fa-plus-square.j-plus
-                        .c-choose.j-choose
-                            i.fa.fa-check-circle-o
+                            .c-choose.j-choose
+                                i ￥#{menu.price}
+                                i.j-use-credit #{menu.creditprice}两
+
+
             //这里是放已选的
             .j-show-chosen.hide
                 .j-orders
