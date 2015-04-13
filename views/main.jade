@@ -19,7 +19,7 @@ html(lang="en")
                     h2 菜谱
                     span.btn.btn-primary.j-activity-btn 活动
                 .j-chosen-header.hide
-                    h2 已选
+                    h2 购物车
                 .j-mine-header.hide
                     h2 我的
         .row.white-bg.c-lists
@@ -33,7 +33,7 @@ html(lang="en")
                     span(data-kind="3") 饮品
                     span(data-kind="4") 主食
                 for menu in menus
-                    .c-item.clearfix.j-item(data-id="#{menu.id}",data-kind="#{menu.kind}")
+                    .c-item.clearfix.j-item(data-id="#{menu.id}",data-kind="#{menu.kind}",data-price="#{menu.price}",data-credit="#{menu.creditprice}")
                         .c-picture
                             img.c-img(src="http://pic4.nipic.com/20090728/3135030_132238077_2.jpg")
                         .c-food
@@ -74,7 +74,7 @@ html(lang="en")
                     i.fa.fa-check-square-o.c-foot-i
                 div.text-center
                     span
-                        |  已选
+                        |  购物车
             .j-orders-foot.c-foot-div
                 div.text-center
                     i.fa.fa-list-alt.c-foot-i

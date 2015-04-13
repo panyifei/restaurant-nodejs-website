@@ -39,6 +39,7 @@ app.post("/ajax/addOrder",function(req,res){
     var telephone = req.body.telephone;
     var definition = req.body.menus;
     var total = req.body.total;
+    var creditused = req.body.creditused;
     //这里需要判断一下是否点了，还有1个小时内只准点一次
 
     if(total==0){
@@ -50,10 +51,11 @@ app.post("/ajax/addOrder",function(req,res){
                 addTime: new Date,
                 definition: definition,
                 total: total,
+                creditused:creditused,
                 status: 1
             })
             .exec(function () {
-                res.send(200, "已经成功提交~"+"您的消费金额为"+total);
+                res.send(200, "已经成功提交~"+"您的消费金额为"+total+"消费积分为:"+creditused);
             });
     }
 

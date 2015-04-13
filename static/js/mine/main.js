@@ -98,12 +98,22 @@ $(".j-submit-btn").click(function(){
     var i = 0;
     var menus = "";
     var total = 0;
+    var creditused = 0;
+    var num;
     while(i<length){
-        menus += $($('.j-orders .j-item')[i]).data("id")+"@";
-        var num = $($('.j-orders .j-item')[i]).find("input").attr("value");
+        num = $($('.j-orders .j-item')[i]).find("input").attr("value");
+        menus += $($('.j-orders .j-item')[i]).data("id");
+        if($($('.j-orders .j-item')[i]).find('.j-use-credit').length == 0){
+            menus += "@";
+            var price = $($('.j-orders .j-item')[i]).data('price');
+            total =  total * 1 + num * price;
+        }else{
+            menus += "#";
+            var credit = $($('.j-orders .j-item')[i]).data('credit');
+            creditused =  creditused * 1 + 1 * credit;
+        }
         menus += num;
-        var price = $($('.j-orders .j-item')[i]).find(".j-price").text();
-        total =  total * 1 + num * price;
+
         if(i != length-1){
             menus += "/";
         }
@@ -117,7 +127,8 @@ $(".j-submit-btn").click(function(){
         data: {
             telephone: '13121310',
             menus:menus,
-            total:total
+            total:total,
+            creditused:creditused
         },
         success: function (res) {
             $('.j-tip h2').text(res);
