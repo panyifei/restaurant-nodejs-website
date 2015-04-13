@@ -21,7 +21,7 @@ html(lang="en")
                 .j-chosen-header.hide
                     h2 购物车
                 .j-mine-header.hide
-                    h2 我的
+                    h2 我的信息
         .row.white-bg.c-lists
 
             //这里是放菜单的
@@ -35,7 +35,7 @@ html(lang="en")
                 for menu in menus
                     .c-item.clearfix.j-item(data-id="#{menu.id}",data-kind="#{menu.kind}",data-price="#{menu.price}",data-credit="#{menu.creditprice}")
                         .c-picture
-                            img.c-img(src="http://pic4.nipic.com/20090728/3135030_132238077_2.jpg")
+                            img.c-img(src="http://a0.att.hudong.com/80/22/01300000164151121168225892321.jpg")
                         .c-food
                             h2 #{menu.name}
                             h3 #{menu.description}
@@ -57,11 +57,16 @@ html(lang="en")
 
             .j-show-mine.hide
                 for user in users
-                    .user-info
-                        img.c-img(src="http://pic4.nipic.com/20090728/3135030_132238077_2.jpg")
-                        h2 #{user.telephone}
-                        h3 #{user.creditnow}
-                        h3 #{user.creditall}
+                    .j-user-info(data-level="#{user.level}")
+                        p.c-user-info
+                            img.c-user-img(src="http://wenwen.soso.com/p/20100212/20100212193336-941627221.jpg")
+                            span.c-user-tele #{user.telephone}
+                            span.c-user-level Level #{user.level}
+                        .c-division
+                        h3.c-user-info 财富值： #{user.creditnow}
+                        .c-division
+                        h3.c-user-info 性别： #{user.sex}
+
         .c-foot
             .j-main-foot.c-foot-div.c-foot-chosen
                 div.text-center
@@ -91,7 +96,7 @@ html(lang="en")
 
 
         .c-tip.j-tip.hide
-            h2 订单提交成功！
+            h2
         .c-activity.j-activity
             span
                 i.fa.fa-times.c-foot-i

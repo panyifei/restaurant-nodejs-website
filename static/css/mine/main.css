@@ -131,8 +131,8 @@
 .c-only-btn{
     width: 48%;
     position: relative;
-    left: 21%;
-    margin: 10px 0;
+    left: 25%;
+    margin: 10px 0 70px 0;
     font-size: 20px;
 }
 .c-foot-i{
@@ -146,13 +146,44 @@
 .c-foot-chosen{
     color: #18A689;
 }
+
+/*用户信息*/
+.c-user-info{
+    position: relative;
+    margin: 0;
+    padding: 20px 42px;
+    border-bottom: 1px solid #d7d7d7;
+}
+.c-user-tele{
+    font-size: 24px;
+    right: 63px;
+    top: 22px;
+    position: absolute;
+}
+.c-user-level{
+    font-size: 24px;
+    right: 70px;
+    top: 61px;
+    color: #FCA302;
+    position: absolute;
+}
+.c-user-img{
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    position: relative;
+}
+.c-division{
+    height: 10px;
+    background-color: rgb(243, 243, 244);
+}
 /*用来提示的东西,包括活动*/
 .c-tip{
     padding: 13px 27px;
     color: #fff;
     width: 50%;
     position: fixed;
-    height: 30%;
+    height: 43%;
     left: 25%;
     top: 25%;
     background-color: #33cc99;

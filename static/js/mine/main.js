@@ -3,6 +3,16 @@ $('.j-choose i').click(function () {
     if($(this).hasClass('c-chosen')){
         $(this).removeClass('c-chosen');
     }else{
+        //如果点击了积分的话，会进行限制的，根据等级判断能够兑换几份
+        if($(this).hasClass('j-use-credit')){
+            var num = $('.j-user-info').data('level');
+            if($('.j-show-lists .j-use-credit.c-chosen').length >= num){
+                $('.j-tip h2').text("您的等级为"+num+"级，一次消费只能兑换一份");
+                $('.j-tip').removeClass('hide');
+                return;
+            }
+        }
+
         if($(this).siblings().hasClass('c-chosen')){
             $(this).addClass('c-chosen').siblings().removeClass('c-chosen');
         }else{
