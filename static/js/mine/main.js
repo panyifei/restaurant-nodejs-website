@@ -55,19 +55,19 @@ $('.j-chosen-foot').click(function(){
     $('.j-show-chosen').removeClass('hide').siblings().addClass('hide');
     $('.j-chosen-header').removeClass('hide').siblings().addClass('hide');
 
-    $(".j-orders").empty();
-    $(".j-orders").append($('.c-chosen').parents('.j-item').clone(true));
+    $(".j-chosen").empty();
+    $(".j-chosen").append($('.c-chosen').parents('.j-item').clone(true));
     //这里显示和添加数量
-    $('.j-orders .j-item').removeClass('hide');
-    $('.j-orders .j-item').find('.c-chosen').siblings().remove();
-    var allitems = $('.j-orders .j-item').find('.c-chosen');
+    $('.j-chosen .j-item').removeClass('hide');
+    $('.j-chosen .j-item').find('.c-chosen').siblings().remove();
+    var allitems = $('.j-chosen .j-item').find('.c-chosen');
     for(var i = 0;i < allitems.length;i++){
         if($(allitems.get(i)).hasClass('j-use-credit')===false){
             $(allitems.get(i)).parents('.j-item').find('.j-num').toggleClass("hide");
         }
     }
 
-    $('.j-orders .j-choose').click(function(){
+    $('.j-chosen .j-choose').click(function(){
         var id =  $(this).parents('.j-item').attr("data-id");
         $(this).parents('.j-item').remove();
         $("[data-id='"+id+"']").find(".j-choose").click();
@@ -80,6 +80,30 @@ $('.j-main-foot').click(function(){
     $(this).addClass('c-foot-chosen').siblings().removeClass('c-foot-chosen');
     $('.j-show-lists').removeClass('hide').siblings().addClass('hide');
     $('.j-lists-header').removeClass('hide').siblings().addClass('hide');
+});
+
+//点击订单
+$('.j-orders-foot').click(function(){
+    $(this).addClass('c-foot-chosen').siblings().removeClass('c-foot-chosen');
+    $('.j-show-orders').removeClass('hide').siblings().addClass('hide');
+    $('.j-orders-header').removeClass('hide').siblings().addClass('hide');
+    $.ajax({
+        type: "post",
+        url: "ajax/getOrders",
+        data: {
+            telephone: '13121310'
+        },
+        success: function (res) {
+            if(res.length==0){
+                $('.j-no-orders').removeClass('hide');
+            }else{
+
+            }
+        },
+        error: function () {
+            //toastr.error('发生错误');
+        }
+    });
 });
 
 //点击我的
@@ -104,22 +128,22 @@ $('.j-activity-btn').click(function(){
 
 //提交
 $(".j-submit-btn").click(function(){
-    var length = $('.j-orders .j-item').length;
+    var length = $('.j-chosen .j-item').length;
     var i = 0;
     var menus = "";
     var total = 0;
     var creditused = 0;
     var num;
     while(i<length){
-        num = $($('.j-orders .j-item')[i]).find("input").attr("value");
-        menus += $($('.j-orders .j-item')[i]).data("id");
-        if($($('.j-orders .j-item')[i]).find('.j-use-credit').length == 0){
+        num = $($('.j-chosen .j-item')[i]).find("input").attr("value");
+        menus += $($('.j-chosen .j-item')[i]).data("id");
+        if($($('.j-chosen .j-item')[i]).find('.j-use-credit').length == 0){
             menus += "@";
-            var price = $($('.j-orders .j-item')[i]).data('price');
+            var price = $($('.j-chosen .j-item')[i]).data('price');
             total =  total * 1 + num * price;
         }else{
             menus += "#";
-            var credit = $($('.j-orders .j-item')[i]).data('credit');
+            var credit = $($('.j-chosen .j-item')[i]).data('credit');
             creditused =  creditused * 1 + 1 * credit;
         }
         menus += num;

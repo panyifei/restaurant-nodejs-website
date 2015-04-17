@@ -177,6 +177,14 @@
     height: 10px;
     background-color: rgb(243, 243, 244);
 }
+/*订单*/
+.c-order{
+    padding-left: 38px;
+}
+.c-order .c-time{
+    font-size: 20px;
+}
+
 /*用来提示的东西,包括活动*/
 .c-tip{
     padding: 13px 27px;

@@ -20,6 +20,8 @@ html(lang="en")
                     span.btn.btn-primary.j-activity-btn 活动
                 .j-chosen-header.hide
                     h2 购物车
+                .j-orders-header.hide
+                    h2 我的订单
                 .j-mine-header.hide
                     h2 我的信息
         .row.white-bg.c-lists
@@ -50,10 +52,26 @@ html(lang="en")
 
             //这里是放已选的
             .j-show-chosen.hide
-                .j-orders
+                .j-chosen
                 .j-submit
                     button.btn.btn-primary.c-only-btn.j-submit-btn
                         |  提交
+
+            //这里是放订单的
+            .j-show-orders.hide
+                .j-orders
+                    .c-order
+                        .c-time 2014-03-24 下单
+                        .c-menu
+                            span.c-menu-name 外婆红烧肉
+                            span.c-menu-num 1
+                        .c-price
+                            span.c-total ￥144
+                            span.c-creditused 480两
+
+                    .c-division
+
+                .j-no-orders.hide 对不起，您并没有下任何订单啊~
 
             .j-show-mine.hide
                 for user in users

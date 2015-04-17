@@ -58,9 +58,18 @@ app.post("/ajax/addOrder",function(req,res){
                 res.send(200, "已经成功提交~"+"您的消费金额为"+total+"消费积分为:"+creditused);
             });
     }
-
 });
 
+//获得订单
+app.post("/ajax/getOrders",function(req,res){
+    var telephone = req.body.telephone;
+    var orders = db.where({telephone:telephone}).select().table('order').exec(function(){
+        orders = orders._settledValue;
+
+        res.send(200,orders);
+
+    });
+});
 
 
 app.listen(3000);
