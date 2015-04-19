@@ -109,7 +109,9 @@ $('.j-orders-foot').click(function(){
                         }
                         orders+="<div class='c-menu'><span class='c-menu-name'>"+order[1]+"</span><span>x</span><span class='c-menu-num'>"+order[2]+"</span></div>";
                     }
-                    orders+="<div class='c-price'><span>共消费</span><span class='c-total'>￥"+res[l].total+"</span><span> 使用积分</span><span class='c-creditused'>"+res[l].creditused+"两</span></div></div><div class='c-division'></div>";
+                    orders+="<div class='c-price-div'><span>共消费:</span><span class='c-total'>￥"+res[l].total+"</span><span> 使用积分:</span><span class='c-total'>"+res[l].creditused+"两</span></div>";
+                    orders+="<div class='c-status-div'><span>订单状态:</span><span class='c-status'>"+res[l].status+"</span></div></div>";
+                    orders+="<div class='c-division'></div>";
                 }
                 $('.j-orders').append(orders);
             }
@@ -173,7 +175,12 @@ $(".j-submit-btn").click(function(){
         i++;
     }
     //menus是具体的点餐的东西，形式是1@后面是数量@1/2@前面是id@1,@代表花钱
-
+    var creditnow = $('.j-user-info').data('creditnow');;
+    if(creditnow < creditused){
+        $('.j-tip h2').text("您的积分只有" + creditnow + "两，不够"+creditused+"两啊~亲");
+        $('.j-tip').removeClass('hide');
+        return;
+    }
     $.ajax({
         type: "post",
         url: "ajax/addOrder",

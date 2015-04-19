@@ -187,8 +187,18 @@
 .c-menu-name{
     margin-left:10px;
 }
-.c-order .c-price{
+.c-order .c-price-div{
     font-size: 16px;
+}
+.c-order .c-status-div{
+    font-size: 13px;
+    margin-left:10px;
+}
+.c-order .c-total{
+    color:#3BB00B;
+}
+.c-order .c-status{
+    color:#3BB00B;
 }
 /*用来提示的东西,包括活动*/
 .c-tip{
