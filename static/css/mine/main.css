@@ -184,7 +184,12 @@
 .c-order .c-time{
     font-size: 20px;
 }
-
+.c-menu-name{
+    margin-left:10px;
+}
+.c-order .c-price{
+    font-size: 16px;
+}
 /*用来提示的东西,包括活动*/
 .c-tip{
     padding: 13px 27px;

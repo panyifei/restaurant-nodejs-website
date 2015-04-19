@@ -97,7 +97,21 @@ $('.j-orders-foot').click(function(){
             if(res.length==0){
                 $('.j-no-orders').removeClass('hide');
             }else{
-
+                $('.j-orders').empty();
+                var orders = "";
+                for(var l=0;l<res.length;l++){
+                    orders+="<div class='c-order'><div class='c-time'>"+res[l].addTime.substring(0,10)+" 下单</div>";
+                    var orderarr = res[l].definition.split('/');
+                    for(var i = 0;i<orderarr.length;i++){
+                        var order = orderarr[i].split("@");
+                        if(order.length == 1){
+                            order = orderarr[i].split('#');
+                        }
+                        orders+="<div class='c-menu'><span class='c-menu-name'>"+order[1]+"</span><span>x</span><span class='c-menu-num'>"+order[2]+"</span></div>";
+                    }
+                    orders+="<div class='c-price'><span>共消费</span><span class='c-total'>￥"+res[l].total+"</span><span> 使用积分</span><span class='c-creditused'>"+res[l].creditused+"两</span></div></div><div class='c-division'></div>";
+                }
+                $('.j-orders').append(orders);
             }
         },
         error: function () {
@@ -141,10 +155,15 @@ $(".j-submit-btn").click(function(){
             menus += "@";
             var price = $($('.j-chosen .j-item')[i]).data('price');
             total =  total * 1 + num * price;
+            var name = $($('.j-chosen .j-item')[i]).data('name');
+            menus += name + "@";
+
         }else{
             menus += "#";
             var credit = $($('.j-chosen .j-item')[i]).data('credit');
             creditused =  creditused * 1 + 1 * credit;
+            var name = $($('.j-chosen .j-item')[i]).data('name');
+            menus += name + "#";
         }
         menus += num;
 
@@ -153,7 +172,7 @@ $(".j-submit-btn").click(function(){
         }
         i++;
     }
-    //menus是具体的点餐的东西，形式是1@1/2@1
+    //menus是具体的点餐的东西，形式是1@后面是数量@1/2@前面是id@1,@代表花钱
 
     $.ajax({
         type: "post",

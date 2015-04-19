@@ -35,7 +35,7 @@ html(lang="en")
                     span(data-kind="3") 饮品
                     span(data-kind="4") 主食
                 for menu in menus
-                    .c-item.clearfix.j-item(data-id="#{menu.id}",data-kind="#{menu.kind}",data-price="#{menu.price}",data-credit="#{menu.creditprice}")
+                    .c-item.clearfix.j-item(data-id="#{menu.id}",data-name="#{menu.name}",data-kind="#{menu.kind}",data-price="#{menu.price}",data-credit="#{menu.creditprice}")
                         .c-picture
                             img.c-img(src="http://a0.att.hudong.com/80/22/01300000164151121168225892321.jpg")
                         .c-food
@@ -64,12 +64,19 @@ html(lang="en")
                         .c-time 2014-03-24 下单
                         .c-menu
                             span.c-menu-name 外婆红烧肉
+                            span x
+                            span.c-menu-num 1
+                        .c-menu
+                            span.c-menu-name 白饭
+                            span x
                             span.c-menu-num 1
                         .c-price
+                            span 共消费
                             span.c-total ￥144
+                            span  使用积分
                             span.c-creditused 480两
-
                     .c-division
+
 
                 .j-no-orders.hide 对不起，您并没有下任何订单啊~
 
