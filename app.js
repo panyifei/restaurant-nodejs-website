@@ -45,18 +45,30 @@ app.post("/ajax/addOrder",function(req,res){
     if(total==0){
         res.send(200, "对不起，请至少点一份~");
     }else {
-        db("order")
-            .insert({
-                telephone: telephone,
-                addTime: new Date,
-                definition: definition,
-                total: total,
-                creditused:creditused,
-                status: 1
-            })
+
+        var orders = db('order')
+            .whereIn('telephone', [telephone])
+            .whereNotIn('status', ["已完结"])
             .exec(function () {
-                res.send(200, "已经成功提交~"+"您的消费金额为"+total+"消费积分为:"+creditused);
+                orders = orders._settledValue;
+                if(orders.length!=0){
+                    res.send(200, "对不起，您今天有未完结的订单");
+                }else{
+                    db("order")
+                        .insert({
+                            telephone: telephone,
+                            addTime: new Date,
+                            definition: definition,
+                            total: total,
+                            creditused:creditused,
+                            status: '已提交'
+                        })
+                        .exec(function () {
+                            res.send(200, "已经成功提交~"+"您的消费金额为"+total+"消费积分为:"+creditused);
+                        });
+                }
             });
+
     }
 });
 
