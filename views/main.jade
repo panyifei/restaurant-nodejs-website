@@ -29,13 +29,13 @@ html(lang="en")
             //这里是放菜单的
             .j-show-lists
                 .c-kinds.j-kinds
-                    span.c-chosen-kind(data-kind="0") 特色
+                    span(data-kind="0") 特色
                     span(data-kind="1") 荤菜
                     span(data-kind="2") 素菜
                     span(data-kind="3") 饮品
                     span(data-kind="4") 主食
                 for menu in menus
-                    .c-item.clearfix.j-item(data-id="#{menu.id}",data-name="#{menu.name}",data-kind="#{menu.kind}",data-price="#{menu.price}",data-credit="#{menu.creditprice}")
+                    .c-item.clearfix.j-item(data-id="#{menu.id}",data-name="#{menu.name}",data-kind="#{menu.kind}",data-price="#{menu.price}",data-credit="#{menu.creditprice}",data-ifrecommend="#{menu.ifrecommend}")
                         .c-picture
                             img.c-img(src="http://a0.att.hudong.com/80/22/01300000164151121168225892321.jpg")
                         .c-food
@@ -48,7 +48,7 @@ html(lang="en")
                             .c-choose.j-choose
                                 i ￥#{menu.price}
                                 i.j-use-credit #{menu.creditprice}两
-
+                .c-list-division
 
             //这里是放已选的
             .j-show-chosen.hide
@@ -78,7 +78,7 @@ html(lang="en")
                     //.c-division
 
 
-                .j-no-orders.hide 对不起，您并没有下任何订单啊~
+                .j-no-orders.c-no-orders.hide 对不起，您并没有下任何订单啊~
 
             .j-show-mine.hide
                 for user in users

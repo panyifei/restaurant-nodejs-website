@@ -28,7 +28,9 @@ $('.c-kinds span').click(function(){
     $(this).addClass("c-chosen-kind").siblings('span').removeClass('c-chosen-kind');
     var kind = $(this).attr("data-kind");
     if(kind == 0){
-        $(".j-item").removeClass('hide');
+        //这个时候选中的是特色
+        $(".j-item[data-ifrecommend='"+1+"']").removeClass('hide');
+        $(".j-item[data-ifrecommend!='"+1+"']").addClass('hide');
         return;
     }
     $(".j-item[data-kind!='"+kind+"']").addClass('hide');
@@ -95,8 +97,10 @@ $('.j-orders-foot').click(function(){
         },
         success: function (res) {
             if(res.length==0){
+                $('.j-orders').empty();
                 $('.j-no-orders').removeClass('hide');
             }else{
+                $('.j-no-orders').addClass('hide');
                 $('.j-orders').empty();
                 var orders = "";
                 for(var l=0;l<res.length;l++){
