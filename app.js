@@ -83,6 +83,23 @@ app.post("/ajax/getOrders",function(req,res){
     });
 });
 
+//改变订单状态
+app.post("/ajax/changeOrder",function(req,res){
+    var id = req.body.id;
+    db('order')
+        .where('id', '=', id)
+        .where('status','=',"已提交")
+        .update({
+            status: '已撤单'
+        }).exec(function (err,rows) {
+            if(rows===1){
+                res.send(200, "已经成功取消订单");
+            }else{
+                res.send(200, "对不起，此单已经被接受，无法取消，请联系服务员~");
+            }
+
+        });
+});
 
 app.listen(3000);
 console.log("server started at http://localhost:3000");

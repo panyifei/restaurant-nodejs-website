@@ -184,6 +184,7 @@
 /*订单*/
 .c-order{
     padding-left: 38px;
+    position: relative;
 }
 .c-order .c-time{
     font-size: 20px;
@@ -208,6 +209,17 @@
     padding: 65px;
     color: #F00;
     font-size: 24px;
+}
+.c-change-status span{
+    position: absolute;
+    top: 15px;
+    right: 27px;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #1367D7;
+    box-shadow: 3px 3px 13px #888888;
 }
 /*用来提示的东西,包括活动*/
 .c-tip{

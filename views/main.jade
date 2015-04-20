@@ -126,7 +126,11 @@ html(lang="en")
             span
                 i.fa.fa-times.c-foot-i
             h2 今日活动
-            for activity in activitys
-                h3 #{activity.subject}
-                h4 #{activity.detail}
+            - var num = 1;
+            #num
+                for activity in activitys
+                    h3=num
+                        |  #{activity.subject}
+                    - num++;
+                    h4 #{activity.detail}
         script(src='js/mine/main.js')
