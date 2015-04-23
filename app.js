@@ -10,6 +10,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(bodyParser.json());
 
 
+var ajax = require("./ajax");
+
+
 //主页面
 //肉菜为1，素菜为2，饮品为3，小吃为4
 app.get('/main', function(req, res){
