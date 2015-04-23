@@ -41,13 +41,13 @@ html(lang="en")
                         .c-food
                             h2 #{menu.name}
                             h3 #{menu.description}
+                            .c-choose.j-choose
+                                i ￥#{menu.price}
+                                i.j-use-credit #{menu.creditprice}两
                             .c-num.j-num.hide
                                 i.fa.fa-minus-square.j-minus
                                 input(type="num", name="num", value=1)
                                 i.fa.fa-plus-square.j-plus
-                            .c-choose.j-choose
-                                i ￥#{menu.price}
-                                i.j-use-credit #{menu.creditprice}两
                 .c-list-division
 
             //这里是放已选的
@@ -84,7 +84,7 @@ html(lang="en")
                 for user in users
                     .j-user-info(data-level="#{user.level}",data-creditnow="#{user.creditnow}")
                         p.c-user-info
-                            img.c-user-img(src="http://wenwen.soso.com/p/20100212/20100212193336-941627221.jpg")
+                            img.c-user-img(src="http://a0.att.hudong.com/80/22/01300000164151121168225892321.jpg")
                             span.c-user-tele #{user.telephone}
                             span.c-user-level Level #{user.level}
                         .c-division
