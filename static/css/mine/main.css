@@ -38,7 +38,7 @@
     content: "|";
 }
 .c-chosen-kind{
-    color: #8FEF36;
+    color: #ffff33;
     font-size: 23px;
 }
 /*外面的框*/
@@ -179,6 +179,10 @@
     height: 10px;
     background-color: rgb(243, 243, 244);
 }
+.c-big-division{
+    height: 80px;
+    background-color: rgb(243, 243, 244);
+}
 .c-list-division{
     height: 40px;
     background-color: rgb(243, 243, 244);
@@ -205,6 +209,9 @@
 }
 .c-order .c-status{
     color:#3BB00B;
+}
+.c-order .c-status-cancel{
+    color: #F00;
 }
 .c-no-orders{
     padding: 65px;

@@ -51,7 +51,7 @@ $('.j-plus').click(function () {
     $(this).siblings('input').attr("value",$(this).siblings('input').attr("value")*1+1);
 });
 
-//点击已选
+//点击购物车
 $('.j-chosen-foot').click(function(){
     $(this).addClass('c-foot-chosen').siblings().removeClass('c-foot-chosen');
     $('.j-show-chosen').removeClass('hide').siblings().addClass('hide');
@@ -63,6 +63,12 @@ $('.j-chosen-foot').click(function(){
     $('.j-chosen .j-item').removeClass('hide');
     $('.j-chosen .j-item').find('.c-chosen').siblings().remove();
     var allitems = $('.j-chosen .j-item').find('.c-chosen');
+    //如果数量为0
+    if(allitems.length==0){
+        $('.j-chosen').addClass('hide').siblings('.j-submit').addClass('hide').siblings('.j-no-chosen').removeClass('hide');
+    }else{
+        $('.j-chosen').removeClass('hide').siblings('.j-submit').removeClass('hide').siblings('.j-no-chosen').addClass('hide');
+    }
     for(var i = 0;i < allitems.length;i++){
         if($(allitems.get(i)).hasClass('j-use-credit')===false){
             $(allitems.get(i)).parents('.j-item').find('.j-num').toggleClass("hide");
@@ -114,13 +120,21 @@ $('.j-orders-foot').click(function(){
                         orders+="<div class='c-menu'><span class='c-menu-name'>"+order[1]+"</span><span>x</span><span class='c-menu-num'>"+order[2]+"</span></div>";
                     }
                     orders+="<div class='c-price-div'><span>共消费:</span><span class='c-total'>￥"+res[l].total+"</span><span> 使用积分:</span><span class='c-total'>"+res[l].creditused+"两</span></div>";
-                    orders+="<div class='c-status-div'><span>订单状态:</span><span class='c-status'>"+res[l].status+"</span></div>";
+                    orders+="<div class='c-status-div'><span>订单状态:</span><span class='";
+                    if(res[l].status == '已撤单'){
+                        orders+="c-status-cancel";
+                    }else{
+                        orders+="c-status";
+                    }
+
+                    orders+="'>"+res[l].status+"</span></div>";
                     if(res[l].status=="已提交"){
                         orders+="<div class='c-change-status'><span class='j-change-status'>撤单</span></div>";
                     }
                     orders+="</div>";
                     orders+="<div class='c-division'></div>";
                 }
+                orders+="<div class='c-big-division'></div>";
                 $('.j-orders').append(orders);
                 //这里给撤单加个点击事件
                 $(".j-change-status").click(function(){

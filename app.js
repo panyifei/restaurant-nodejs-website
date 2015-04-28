@@ -51,7 +51,7 @@ app.post("/ajax/addOrder",function(req,res){
 
         var orders = db('order')
             .whereIn('telephone', [telephone])
-            .whereNotIn('status', ["已完结"])
+            .whereNotIn('status', ["已完结",'已撤单'])
             .exec(function () {
                 orders = orders._settledValue;
                 if(orders.length!=0){
