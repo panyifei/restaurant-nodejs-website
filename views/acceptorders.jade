@@ -1,0 +1,39 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="initial-scale=1, maximum-scale=1, user-scalable=no")
+        title 接受订餐页
+        link(href="css/bootstrap.min.css", rel="stylesheet")
+        link(href="font-awesome/css/font-awesome.css", rel="stylesheet")
+        link(href="css/animate.css", rel="stylesheet")
+        link(href="css/style.css", rel="stylesheet")
+        link(href="css/page/acceptorders.css", rel="stylesheet")
+        script(src='js/jquery-1.10.2.js')
+        script(src="js/bootstrap.min.js")
+
+    body(style="background-color: #F3F3F4;")
+
+        //这里是放订单的
+
+        .c-orders
+            for order in orders
+                .c-order
+                    .c-time #{order.addTime} 下单
+                    .c-menu
+                        span.c-menu-name 外婆红烧肉
+                        span x
+                        span.c-menu-num 1
+                    .c-menu
+                        span.c-menu-name 白饭
+                        span x
+                        span.c-menu-num 1
+                    .c-price
+                        span 共消费
+                        span.c-total ￥144
+                        span  使用积分
+                        span.c-creditused 480两
+
+        script(src='js/page/acceptorders.js')
+
+

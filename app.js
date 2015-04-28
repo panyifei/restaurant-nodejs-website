@@ -13,6 +13,19 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var ajax = require("./ajax");
 
 
+
+//商家用来确认订单的页面
+app.get('/acceptorders', function(req, res){
+    var orders = db.select().table('order').exec(function(){
+        orders = orders._settledValue;
+
+        res.render("acceptorders", {
+            orders:orders
+        });
+
+    });
+});
+
 //主页面
 //肉菜为1，素菜为2，饮品为3，小吃为4
 app.get('/main', function(req, res){
