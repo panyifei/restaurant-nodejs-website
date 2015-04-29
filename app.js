@@ -35,6 +35,42 @@ app.post("/ajax/getAllOrders",function(req,res){
 });
 
 
+//商家接受订单状态
+app.post("/ajax/acceptOrder",function(req,res){
+    var id = req.body.id;
+    db('order')
+        .where('id', '=', id)
+        .where('status','=',"已提交")
+        .update({
+            status: '已接受'
+        }).exec(function (err,rows) {
+            if(rows===1){
+                res.send(200, "成功");
+            }else{
+                res.send(200, "对不起，此单已经被撤销，无法接受，请刷新页面~");
+            }
+
+        });
+});
+
+//商家撤销改单
+app.post("/ajax/cancelOrder",function(req,res){
+    var id = req.body.id;
+    db('order')
+        .where('id', '=', id)
+        .where('status','=',"已提交")
+        .update({
+            status: '已撤单'
+        }).exec(function (err,rows) {
+            if(rows===1){
+                res.send(200, "成功");
+            }else{
+                res.send(200, "对不起，此单已经被用户撤销");
+            }
+
+        });
+});
+
 //主页面
 //肉菜为1，素菜为2，饮品为3，小吃为4
 app.get('/main', function(req, res){
@@ -125,6 +161,8 @@ app.post("/ajax/changeOrder",function(req,res){
 
         });
 });
+
+
 
 app.listen(3000);
 console.log("server started at http://localhost:3000");

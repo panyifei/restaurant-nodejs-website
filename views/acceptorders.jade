@@ -8,13 +8,19 @@ html(lang="en")
         link(href="font-awesome/css/font-awesome.css", rel="stylesheet")
         link(href="css/animate.css", rel="stylesheet")
         link(href="css/style.css", rel="stylesheet")
+        link(rel="stylesheet",href="css/mod/toastr.css")
         link(href="css/page/acceptorders.css", rel="stylesheet")
         script(src='js/jquery-1.10.2.js')
         script(src="js/bootstrap.min.js")
+        script(src="js/mod/toastr.js")
 
     body(style="background-color: #79C3D2;")
         .c-header 订单处理页
-        //这里是放订单的
+        .c-nav.j-nav
+            span.j-default-nav 已提交
+            span 已接受
+            span 已完结
+            span 已撤单
 
         .j-show-orders
             .j-orders.c-orders
