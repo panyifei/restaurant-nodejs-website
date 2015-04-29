@@ -12,7 +12,6 @@ $.ajax({
     data: {
     },
     success: function (res) {
-
         $('.j-orders').empty();
         var orders = "";
         for(var l=0;l<res.length;l++){
@@ -101,4 +100,4 @@ $.ajax({
     }
 });
 
-//setTimeout("location.reload()",10000);
+setTimeout("location.reload()",10000);

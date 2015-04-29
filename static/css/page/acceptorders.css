@@ -1,19 +1,19 @@
 .c-header{
     max-width: 70%;
     margin-left: 15%;
-    background-color: #213F6C;
+    background-color: #333;
     margin-top: 16px;
-    font-size: 40px;
+    font-size: 28px;
     color: #fff;
-    padding: 13px;
+    padding: 29px;
     border-radius: 10px 10px 0px 0px;
 }
 /*简单的导航条的css*/
 .c-nav{
     max-width: 70%;
     margin-left: 15%;
-    background-color: #4579C7;
-    font-size: 28px;
+    background-color: #08C;
+    font-size: 20px;
     color: #fff;
     padding: 10px;
 }
@@ -23,16 +23,17 @@
     content: "|";
 }
 .c-chosen{
-    font-size: 35px;
+    font-size: 26px;
     color: #04ECF5;
 }
 
 /*这里是订单的相关css*/
 .c-orders{
     box-shadow: 3px 3px 13px #888888;
-    background-color: #D9EEF2;
+    background-color: #fff;
     max-width: 70%;
     margin-left: 15%;
+    min-height: 150px;
 }
 .c-order{
     border-bottom: 1px solid #000;

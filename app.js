@@ -30,7 +30,6 @@ app.post("/ajax/getAllOrders",function(req,res){
     var orders = db.select().table('order').exec(function(){
         orders = orders._settledValue;
         res.send(200,orders);
-
     });
 });
 
