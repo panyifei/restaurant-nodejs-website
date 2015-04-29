@@ -12,27 +12,12 @@ html(lang="en")
         script(src='js/jquery-1.10.2.js')
         script(src="js/bootstrap.min.js")
 
-    body(style="background-color: #F3F3F4;")
-
+    body(style="background-color: #79C3D2;")
+        .c-header 订单处理页
         //这里是放订单的
 
-        .c-orders
-            for order in orders
-                .c-order
-                    .c-time #{order.addTime} 下单
-                    .c-menu
-                        span.c-menu-name 外婆红烧肉
-                        span x
-                        span.c-menu-num 1
-                    .c-menu
-                        span.c-menu-name 白饭
-                        span x
-                        span.c-menu-num 1
-                    .c-price
-                        span 共消费
-                        span.c-total ￥144
-                        span  使用积分
-                        span.c-creditused 480两
+        .j-show-orders
+            .j-orders.c-orders
 
         script(src='js/page/acceptorders.js')
 

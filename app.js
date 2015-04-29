@@ -25,6 +25,15 @@ app.get('/acceptorders', function(req, res){
 
     });
 });
+//商家获得所有订单
+app.post("/ajax/getAllOrders",function(req,res){
+    var orders = db.select().table('order').exec(function(){
+        orders = orders._settledValue;
+        res.send(200,orders);
+
+    });
+});
+
 
 //主页面
 //肉菜为1，素菜为2，饮品为3，小吃为4
