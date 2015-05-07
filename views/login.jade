@@ -1,0 +1,19 @@
+extends blank-layout
+
+block content
+  .middle-box.text-center.loginscreen.animated.fadeInDown
+    div
+      div
+        h1.logo-name IN+
+      h3 餐厅管理后台
+      if locals.message
+        p #{message}
+      form.m-t(role='form', method='post', action='/login')
+        input(name="redir",type="hidden",value=redir)
+        .form-group
+          input.form-control(type='text', name='username', placeholder='Username', required='')
+        .form-group
+          input.form-control(type='password', name='password', placeholder='Password', required='')
+        button.btn.btn-primary.block.full-width.m-b(type='submit') Login
+      p.m-t
+        small 潘逸飞 © 2015

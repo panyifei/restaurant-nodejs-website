@@ -1,0 +1,79 @@
+extends blank-layout
+block content
+  style.
+    .selected td{
+      background-color: #18a689 !important;
+      color: #fff !important
+    }
+    .selected td a{
+      color: #fff !important
+    }
+    #map-container{
+      width: 1000px;
+      height: 500px
+    }
+    td a{
+      display: block;
+      margin-bottom: 10px
+    }
+    .status-filter .btn{
+      margin-right: 10px;
+      margin-bottom: 5px
+    }
+    .table{
+      table-layout: fixed
+    }
+    .table td{
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+  #wrapper
+    nav.navbar-default.navbar-static-side(role='navigation')
+      .sidebar-collapse
+        ul#side-menu.nav
+          li.nav-header
+            .dropdown.profile-element
+              span
+                img.img-circle(alt='image', src='img/a7.jpg', style="width:48px;height:48px")
+                p #{currentUser.Username}
+              a.dropdown-toggle(data-toggle='dropdown', href='#')
+                span.clear
+                  span.block.m-t-xs
+                    //- strong.font-bold #{user.username}
+                  a.text-muted.text-xs.block(href="/logout") 登出
+            .logo-element
+              | IN+
+          if currentUser.Role != "库存运营"
+            li(class=[title=="设备管理"?"active":""])
+              a(href='/device')
+                i.fa.fa-cogs
+                span.nav-label 设备管理
+          if currentUser.Role != "库存运营"
+            li(class=[title=="签约商户管理"?"active":""])
+              a(href='/shop')
+                i.fa.fa-group
+                span.nav-label 签约商户管理
+          if currentUser.Role != "库存运营"
+            li(clas=[title=="商户批量查询"?"active":""])
+              a(href='/shopbatch')
+                i.fa.fa-search
+                span.nav-label 商户批量查询
+          if currentUser.Role == "管理员"
+            li(class=[title=="成员管理"?"active":""])
+              a(href='/member')
+                i.fa.fa-qrcode
+                span.nav-label 成员管理
+          li(class=[title == "操作历史" ? "active" : ""])
+              a(href='/log')
+                i.fa.fa-desktop
+                span.nav-label 操作历史
+
+    #page-wrapper.gray-bg.dashbard-1
+      .row.wrapper.border-bottom.white-bg.page-heading
+        .col-lg-10
+          h2= title
+      .row
+        .col-lg-12
+          .ibox.float-e-margins
+            .ibox-content
+              block main

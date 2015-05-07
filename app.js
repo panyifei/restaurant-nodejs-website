@@ -2,16 +2,16 @@ var express = require('express');
 var app = express();
 var db = require("./connect").db;
 var bodyParser = require('body-parser');
+var passport = require('passport');
 
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/static'));
 app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(bodyParser.json());
 
+var routes = require("./routes");
 
 var ajax = require("./ajax");
-
 
 
 //商家用来确认订单的页面
@@ -161,7 +161,35 @@ app.post("/ajax/changeOrder",function(req,res){
         });
 });
 
+//下面是需要登录的说法了
+function assureLogin(req, res, next) {
+    if (!req.user) {
+        return res.redirect("/login?redir=" + encodeURIComponent(req.path));
+    }
+    next();
+}
 
+app.get("/login", routes.login);
+app.post("/login", passport.authenticate('local', {
+    failureRedirect: '/login',
+    failureFlash: true }), function (req, res, next) {
+    res.redirect(req.body.redir || "/");
+});
+app.get("/logout", routes.logout);
+
+//管理员登录
+app.get('/orders',assureLogin, function(req, res){
+    var orders = db.select().table('order').exec(function(){
+        orders = orders._settledValue;
+
+        res.render("device", {
+            orders:orders,
+            currentUser:{Username:"w",Role:"管理员"},
+            devices:{}
+        });
+
+    });
+});
 
 app.listen(3000);
 console.log("server started at http://localhost:3000");
