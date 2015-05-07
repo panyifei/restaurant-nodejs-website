@@ -20,11 +20,14 @@
   },
   "homepage": "https://github.com/panyifei/nodejs-restaurant",
   "dependencies": {
+    "MD5": "^1.2.1",
     "body-parser": "^1.12.2",
     "express": "^4.12.2",
     "jade": "^1.9.2",
     "knex": "^0.7.6",
     "mysql": "^2.5.5",
-    "passport": "^0.2.1"
+    "passport": "^0.2.1",
+    "passport-local": "^1.0.0",
+    "underscore": "^1.8.3"
   }
 }

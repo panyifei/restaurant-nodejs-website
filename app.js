@@ -10,8 +10,15 @@ app.use(express.static(__dirname + '/static'));
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var routes = require("./routes");
-
+var services = require('./service');
 var ajax = require("./ajax");
+
+app.use(function(req,res,next){
+    req.services = {
+        User: services.user
+    };
+    next();
+});
 
 
 //商家用来确认订单的页面
@@ -168,6 +175,8 @@ function assureLogin(req, res, next) {
     }
     next();
 }
+//这里是密码的初始化
+require("./util/passport-init");
 
 app.get("/login", routes.login);
 app.post("/login", passport.authenticate('local', {
