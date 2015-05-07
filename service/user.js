@@ -18,10 +18,8 @@ module.exports = require("./base")(TABLE, {
         return db.select("*")
             .from(TABLE)
             .where({
-                name: username
-            })
-            .orWhere({
-                Email: username
+                name: username,
+                password:password
             })
             .exec(function (err, rows) {
                 if (err) {
@@ -31,7 +29,7 @@ module.exports = require("./base")(TABLE, {
                 var user = rows[0];
                 if (!user) {
                     return callback("用户不存在");
-                } else if (md5(password) != user.Password) {
+                } else if (password!= user.password) {
                     return callback("密码不正确");
                 } else {
                     return callback(null, user);

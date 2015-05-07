@@ -178,11 +178,13 @@ function assureLogin(req, res, next) {
 }
 //这里是密码的初始化
 require("./util/passport-init");
-
+app.use(passport.initialize());
+app.use(passport.session());
 app.get("/login", routes.login);
 app.post("/login", passport.authenticate('local', {
     failureRedirect: '/login',
     failureFlash: true }), function (req, res, next) {
+    console.log(req.body.redir);
     res.redirect(req.body.redir || "/");
 });
 app.get("/logout", routes.logout);
