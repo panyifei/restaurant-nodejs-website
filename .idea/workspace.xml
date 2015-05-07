@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b21becac-af90-4745-905b-9fb5fc00a124" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/util/passport-init.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/user.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blank-layout.jade" afterPath="$PROJECT_DIR$/views/blank-layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/login.jade" afterPath="$PROJECT_DIR$/views/login.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="$PROJECT_DIR$/npm-debug.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nodejs-restaurant.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="3150">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4070981" vertical-offset="315" max-vertical-offset="3165">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="passport-init.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="passport-init.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/util/passport-init.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.018789144" vertical-offset="36" max-vertical-offset="645">
+            <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="645">
               <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
               <folding />
             </state>
@@ -147,8 +138,8 @@
         <option value="$PROJECT_DIR$/views/login.jade" />
         <option value="$PROJECT_DIR$/service/device.js" />
         <option value="$PROJECT_DIR$/service/base.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/service/user.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -614,12 +605,12 @@
       <workItem from="1430548538526" duration="454000" />
       <workItem from="1430924626542" duration="107000" />
       <workItem from="1430998211826" duration="2316000" />
-      <workItem from="1431013911685" duration="1560000" />
+      <workItem from="1431013911685" duration="1610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68980000" />
+    <option name="totallyTimeSpent" value="69030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -674,7 +665,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/app.js</url>
-          <line>184</line>
+          <line>185</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -1067,18 +1058,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
+    <entry file="file://$PROJECT_DIR$/util/passport-init.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="3150">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="645">
+          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util/passport-init.js">
+    <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.018789144" vertical-offset="36" max-vertical-offset="645">
-          <caret line="3" column="55" selection-start-line="3" selection-start-column="55" selection-end-line="3" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.4070981" vertical-offset="315" max-vertical-offset="3165">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>

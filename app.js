@@ -32,6 +32,7 @@ app.get('/acceptorders', function(req, res){
 
     });
 });
+
 //商家获得所有订单
 app.post("/ajax/getAllOrders",function(req,res){
     var orders = db.select().table('order').exec(function(){
