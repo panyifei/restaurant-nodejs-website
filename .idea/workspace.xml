@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b21becac-af90-4745-905b-9fb5fc00a124" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/user.js" afterPath="$PROJECT_DIR$/service/user.js" />
     </list>
     <ignored path="nodejs-restaurant.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,8 +61,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.1691023" vertical-offset="2676" max-vertical-offset="3195">
-              <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.43632567" vertical-offset="2506" max-vertical-offset="3390">
+              <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -130,8 +129,8 @@
         <option value="$PROJECT_DIR$/service/device.js" />
         <option value="$PROJECT_DIR$/service/base.js" />
         <option value="$PROJECT_DIR$/service/user.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/util/passport-init.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -597,12 +596,12 @@
       <workItem from="1430548538526" duration="454000" />
       <workItem from="1430924626542" duration="107000" />
       <workItem from="1430998211826" duration="2316000" />
-      <workItem from="1431013911685" duration="3477000" />
+      <workItem from="1431013911685" duration="3795000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70897000" />
+    <option name="totallyTimeSpent" value="71215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -1032,8 +1031,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.1691023" vertical-offset="2676" max-vertical-offset="3195">
-          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.43632567" vertical-offset="2506" max-vertical-offset="3390">
+          <caret line="181" column="9" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
           <folding />
         </state>
       </provider>

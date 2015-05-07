@@ -178,6 +178,19 @@ function assureLogin(req, res, next) {
 }
 //这里是密码的初始化
 require("./util/passport-init");
+
+//下面的还没有看
+var config = require('config');
+var session = require('express-session');
+var RedisStore = require('connect-redis')(session);
+app.use(session({
+    store: new RedisStore(config.redis),
+    secret: config.session_secret,
+    cookie: { maxAge: 60 * 24 * 60 * 60 * 1000 },
+    resave: true,
+    unset: "destroy",
+    saveUninitialized: true
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 app.get("/login", routes.login);
