@@ -5,6 +5,7 @@ $.ajax({
     type: "post",
     url: "ajax/getAllOrders",
     data: {
+        type:type
     },
     success: function (res) {
         $('.j-orders').empty();
@@ -26,11 +27,14 @@ $.ajax({
             orders+="<td>￥"+res[l].total+"</td>";
             orders+="<td>"+res[l].creditused+"</td>";
             orders+="<td>"+res[l].status+"</td>";
+            if(res[l].status=="已提交"){
+                orders+="<td class='c-accept-status'><button class='btn btn-primary j-accept-status'>接受</button> <button class='btn btn-default j-cancel-status'>拒绝</button></td>";
+            }else{
+                orders+="<td></td>>"
+            }
             orders+="</tr>";
         }
         $('.j-orders').append(orders);
-        //默认点击未处理
-        $(".j-default-nav").click();
         //这里给接单加个点击事件
         $(".j-accept-status").click(function(){
             var id = $(this).parents('.j-order').data('id');

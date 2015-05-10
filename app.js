@@ -17,9 +17,11 @@ app.use(function(req,res,next){
     req.services = {
         User: services.user
     };
+    req.meta = {
+        order_type: require('./meta/order_type')
+    };
     next();
 });
-
 
 //商家用来确认订单的页面
 app.get('/acceptorders', function(req, res){
@@ -33,9 +35,12 @@ app.get('/acceptorders', function(req, res){
     });
 });
 
-//商家获得所有订单
+//商家获得某种情况的订单
 app.post("/ajax/getAllOrders",function(req,res){
-    var orders = db.select().table('order').exec(function(){
+    var type = req.body.type;
+    var status = req.meta.order_type[type].text;
+    var orders = db.where({status:status}).select().table('order')
+        .exec(function(){
         orders = orders._settledValue;
         res.send(200,orders);
     });
@@ -169,6 +174,14 @@ app.post("/ajax/changeOrder",function(req,res){
         });
 });
 
+
+app.use(function (req, res, next) {
+    req.meta = {
+        order_type: require('./meta/order_type')
+    };
+    next();
+});
+
 //下面是需要登录的说法了
 function assureLogin(req, res, next) {
     if (!req.user) {
@@ -205,18 +218,13 @@ app.get("/",assureLogin, function(req,res){
     res.redirect('/orders');
 });
 
-//管理员登录
+//订单的4中情况都可以的
 app.get('/orders',assureLogin, function(req, res){
-    var orders = db.select().table('order').exec(function(){
-        orders = orders._settledValue;
-
-        res.render("orders", {
-            title: "已提交订单",
-            orders:orders,
-            currentUser:req.user,
-            devices:{}
-        });
-
+    var type = req.query.type;
+    res.render("orders", {
+            type:type,
+            title: req.meta.order_type[type].key,
+            currentUser:req.user
     });
 });
 

@@ -9,10 +9,12 @@ block main
                 td 总价
                 td 使用的积分数
                 td 订单状态
+                td 操作
         tbody.j-orders
 
-
 block scripts
+    script.
+        var type = "#{type}";
     script(src="/js/mod/moment.js")
     script(src="/js/mod/editable-cell.js")
     script(src="/js/mod/map-pane.js")

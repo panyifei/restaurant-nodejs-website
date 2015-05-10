@@ -49,13 +49,13 @@ block content
                 span.fa.arrow
               ul.nav.nav-second-level.collapse
                 li(class=[title == "已提交订单" ? "active" : ""])
-                  a(href='/orders') 已提交
+                  a(href='/orders?type=0') 已提交
                 li(class=[title == "已接受订单" ? "active" : ""])
-                  a(href='/ordersaccepted') 已接受
+                  a(href='/orders?type=1') 已接受
                 li(class=[title == "已完结订单" ? "active" : ""])
-                  a(href='/ordersfinished') 已完结
+                  a(href='/orders?type=2') 已完结
                 li(class=[title == "已撤销订单" ? "active" : ""])
-                  a(href='/orderscanceled') 已撤销
+                  a(href='/orders?type=3') 已撤销
           //if currentUser.role == "管理员"
           //  li(class=[title=="签约商户管理"?"active":""])
           //    a(href='/shop')
