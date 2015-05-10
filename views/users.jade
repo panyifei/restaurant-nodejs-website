@@ -1,0 +1,28 @@
+extends layout
+block main
+    table.table.table-striped.table-bordered.table-hover
+        thead
+            tr
+                td id
+                td 手机号
+                td 等级
+                td 现有积分
+                td 总共积分
+                td 性别
+        tbody
+            for user in users
+                tr(data-id="#{user.id}")
+                    td #{user.id}
+                    td #{user.telephone}
+                    td #{user.level}
+                    td #{user.creditnow}
+                    td #{user.creditall}
+                    td.editable(data-field="sex") #{user.sex}
+
+block scripts
+
+    script(src="/js/mod/moment.js")
+    script(src="/js/mod/editable-cell.js")
+    script(src="/js/mod/map-pane.js")
+    script(src="/js/page/admin/index.js")
+    script(src="/js/page/admin/users.js")

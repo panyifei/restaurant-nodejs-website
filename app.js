@@ -57,6 +57,9 @@ app.post("/ajax/acceptOrder",assureLogin,ajax.order.acceptOrder);
 //商家撤销订单
 app.post("/ajax/cancelOrder",assureLogin,ajax.order.cancelOrder);
 
+//商家的修改的ajax
+app.post("/ajax/users/:id/detail", assureLogin, ajax.users.update);
+
 
 //客户的ajax
 //提交菜单
@@ -86,6 +89,8 @@ app.get('/main', routes.main);
 app.get('/orders',assureLogin, routes.orders);
 app.get('/activity',assureLogin, routes.activity);
 app.get('/admins',assureLogin, routes.admins);
+app.get('/menu',assureLogin, routes.menu);
+app.get('/users',assureLogin, routes.users);
 
 app.listen(3000);
 console.log("server started at http://localhost:3000");

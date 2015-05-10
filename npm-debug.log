@@ -1,11 +1,15 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', 'underscore', '--save' ]
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'underscore.string',
+1 verbose cli   '--save' ]
 2 info using npm@1.4.28
 3 info using node@v0.10.32
 4 warn package.json nodejs-restaurant@1.0.0 No description
 5 verbose readDependencies using package.json deps
-6 verbose cache add [ 'underscore', null ]
-7 verbose cache add name=undefined spec="underscore" args=["underscore",null]
+6 verbose cache add [ 'underscore.string', null ]
+7 verbose cache add name=undefined spec="underscore.string" args=["underscore.string",null]
 8 verbose parsed url { protocol: null,
 8 verbose parsed url   slashes: null,
 8 verbose parsed url   auth: null,
@@ -15,112 +19,99 @@
 8 verbose parsed url   hash: null,
 8 verbose parsed url   search: null,
 8 verbose parsed url   query: null,
-8 verbose parsed url   pathname: 'underscore',
-8 verbose parsed url   path: 'underscore',
-8 verbose parsed url   href: 'underscore' }
-9 silly lockFile 64bc6893-underscore underscore
-10 verbose lock underscore /Users/pyf/.npm/64bc6893-underscore.lock
-11 silly lockFile 64bc6893-underscore underscore
-12 silly lockFile 64bc6893-underscore underscore
-13 verbose addNamed [ 'underscore', '' ]
+8 verbose parsed url   pathname: 'underscore.string',
+8 verbose parsed url   path: 'underscore.string',
+8 verbose parsed url   href: 'underscore.string' }
+9 silly lockFile 7e3f13b5-underscore-string underscore.string
+10 verbose lock underscore.string /Users/pyf/.npm/7e3f13b5-underscore-string.lock
+11 silly lockFile 7e3f13b5-underscore-string underscore.string
+12 silly lockFile 7e3f13b5-underscore-string underscore.string
+13 verbose addNamed [ 'underscore.string', '' ]
 14 verbose addNamed [ null, '*' ]
-15 silly lockFile 7629b758-underscore underscore@
-16 verbose lock underscore@ /Users/pyf/.npm/7629b758-underscore.lock
-17 silly addNameRange { name: 'underscore', range: '*', hasData: false }
-18 verbose request where is /underscore
+15 silly lockFile 827a2736-underscore-string underscore.string@
+16 verbose lock underscore.string@ /Users/pyf/.npm/827a2736-underscore-string.lock
+17 silly addNameRange { name: 'underscore.string', range: '*', hasData: false }
+18 verbose request where is /underscore.string
 19 verbose request registry https://registry.npmjs.org/
-20 verbose request id 16b5791cac5c9776
-21 verbose url raw /underscore
-22 verbose url resolving [ 'https://registry.npmjs.org/', './underscore' ]
-23 verbose url resolved https://registry.npmjs.org/underscore
-24 verbose request where is https://registry.npmjs.org/underscore
-25 info trying registry request attempt 1 at 00:03:35
-26 verbose etag "8GWJ3CM225Q66SWQKOC0PCRP0"
-27 http GET https://registry.npmjs.org/underscore
-28 http 200 https://registry.npmjs.org/underscore
+20 verbose request id 3fa52533c820cc0d
+21 verbose url raw /underscore.string
+22 verbose url resolving [ 'https://registry.npmjs.org/', './underscore.string' ]
+23 verbose url resolved https://registry.npmjs.org/underscore.string
+24 verbose request where is https://registry.npmjs.org/underscore.string
+25 info trying registry request attempt 1 at 00:46:06
+26 verbose etag "7EANIHS0TN9L7RYMR2Z0B7WPT"
+27 http GET https://registry.npmjs.org/underscore.string
+28 http 200 https://registry.npmjs.org/underscore.string
 29 silly registry.get cb [ 200,
 29 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
-29 silly registry.get     etag: '"8SXMDGGWIHHGAS6XTKZQDB565"',
+29 silly registry.get     etag: '"EUR2XPGZX64EHU0KFCNIFQUCI"',
 29 silly registry.get     'content-type': 'application/json',
 29 silly registry.get     'cache-control': 'max-age=60',
-29 silly registry.get     'content-length': '40580',
+29 silly registry.get     'content-length': '55288',
 29 silly registry.get     'accept-ranges': 'bytes',
-29 silly registry.get     date: 'Thu, 07 May 2015 16:03:36 GMT',
+29 silly registry.get     date: 'Sun, 10 May 2015 16:46:07 GMT',
 29 silly registry.get     via: '1.1 varnish',
-29 silly registry.get     age: '15',
+29 silly registry.get     age: '59',
 29 silly registry.get     connection: 'keep-alive',
-29 silly registry.get     'x-served-by': 'cache-lax1435-LAX',
+29 silly registry.get     'x-served-by': 'cache-nrt6129-NRT',
 29 silly registry.get     'x-cache': 'HIT',
-29 silly registry.get     'x-cache-hits': '1',
-29 silly registry.get     'x-timer': 'S1431014616.969017,VS0,VE0',
+29 silly registry.get     'x-cache-hits': '2',
+29 silly registry.get     'x-timer': 'S1431276367.110708,VS0,VE0',
 29 silly registry.get     vary: 'Accept' } ]
-30 silly addNameRange number 2 { name: 'underscore', range: '*', hasData: true }
-31 silly addNameRange versions [ 'underscore',
-31 silly addNameRange   [ '1.0.3',
-31 silly addNameRange     '1.0.4',
-31 silly addNameRange     '1.1.0',
-31 silly addNameRange     '1.1.1',
-31 silly addNameRange     '1.1.2',
+30 silly addNameRange number 2 { name: 'underscore.string', range: '*', hasData: true }
+31 silly addNameRange versions [ 'underscore.string',
+31 silly addNameRange   [ '0.9.2',
+31 silly addNameRange     '1.0.0',
 31 silly addNameRange     '1.1.3',
 31 silly addNameRange     '1.1.4',
 31 silly addNameRange     '1.1.5',
 31 silly addNameRange     '1.1.6',
-31 silly addNameRange     '1.1.7',
-31 silly addNameRange     '1.2.0',
-31 silly addNameRange     '1.2.1',
-31 silly addNameRange     '1.2.2',
-31 silly addNameRange     '1.2.3',
-31 silly addNameRange     '1.2.4',
-31 silly addNameRange     '1.3.0',
-31 silly addNameRange     '1.3.1',
-31 silly addNameRange     '1.3.2',
-31 silly addNameRange     '1.3.3',
-31 silly addNameRange     '1.4.0',
-31 silly addNameRange     '1.4.1',
-31 silly addNameRange     '1.4.2',
-31 silly addNameRange     '1.4.3',
-31 silly addNameRange     '1.4.4',
-31 silly addNameRange     '1.5.0',
-31 silly addNameRange     '1.5.1',
-31 silly addNameRange     '1.5.2',
-31 silly addNameRange     '1.6.0',
-31 silly addNameRange     '1.7.0',
-31 silly addNameRange     '1.8.0',
-31 silly addNameRange     '1.8.1',
-31 silly addNameRange     '1.8.2',
-31 silly addNameRange     '1.8.3' ] ]
-32 verbose addNamed [ 'underscore', '1.8.3' ]
-33 verbose addNamed [ '1.8.3', '1.8.3' ]
-34 silly lockFile e5e32fca-underscore-1-8-3 underscore@1.8.3
-35 verbose lock underscore@1.8.3 /Users/pyf/.npm/e5e32fca-underscore-1-8-3.lock
-36 silly lockFile d5ea30aa--underscore-underscore-1-8-3-tgz https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
-37 verbose lock https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz /Users/pyf/.npm/d5ea30aa--underscore-underscore-1-8-3-tgz.lock
-38 verbose addRemoteTarball [ 'https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz',
-38 verbose addRemoteTarball   '4f3fb53b106e6097fcf9cb4109f2a5e9bdfa5022' ]
-39 info retry fetch attempt 1 at 00:03:37
-40 verbose fetch to= /var/folders/mq/5k5nrdnn167dpjjnnbdkljpm0000gn/T/npm-810--7jM679P/registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
-41 http GET https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
-42 http 200 https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
-43 silly lockFile d5ea30aa--underscore-underscore-1-8-3-tgz https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
-44 silly lockFile d5ea30aa--underscore-underscore-1-8-3-tgz https://registry.npmjs.org/underscore/-/underscore-1.8.3.tgz
-45 silly lockFile e5e32fca-underscore-1-8-3 underscore@1.8.3
-46 silly lockFile e5e32fca-underscore-1-8-3 underscore@1.8.3
-47 silly lockFile 7629b758-underscore underscore@
-48 silly lockFile 7629b758-underscore underscore@
-49 error Error: EACCES, mkdir '/Users/pyf/.npm/underscore/1.8.3'
-49 error  { [Error: EACCES, mkdir '/Users/pyf/.npm/underscore/1.8.3']
+31 silly addNameRange     '2.0.0',
+31 silly addNameRange     '2.1.0',
+31 silly addNameRange     '2.1.1',
+31 silly addNameRange     '2.3.0',
+31 silly addNameRange     '2.3.1',
+31 silly addNameRange     '2.3.2',
+31 silly addNameRange     '2.2.1',
+31 silly addNameRange     '2.2.0-rc',
+31 silly addNameRange     '2.3.3',
+31 silly addNameRange     '2.4.0',
+31 silly addNameRange     '3.0.0',
+31 silly addNameRange     '3.0.1',
+31 silly addNameRange     '3.0.2',
+31 silly addNameRange     '3.0.3' ] ]
+32 verbose addNamed [ 'underscore.string', '3.0.3' ]
+33 verbose addNamed [ '3.0.3', '3.0.3' ]
+34 silly lockFile 076e3c44-underscore-string-3-0-3 underscore.string@3.0.3
+35 verbose lock underscore.string@3.0.3 /Users/pyf/.npm/076e3c44-underscore-string-3-0-3.lock
+36 silly lockFile da5de1e2-ring-underscore-string-3-0-3-tgz https://registry.npmjs.org/underscore.string/-/underscore.string-3.0.3.tgz
+37 verbose lock https://registry.npmjs.org/underscore.string/-/underscore.string-3.0.3.tgz /Users/pyf/.npm/da5de1e2-ring-underscore-string-3-0-3-tgz.lock
+38 verbose addRemoteTarball [ 'https://registry.npmjs.org/underscore.string/-/underscore.string-3.0.3.tgz',
+38 verbose addRemoteTarball   '4617b8c1a250cf6e5064fbbb363d0fa96cf14552' ]
+39 info retry fetch attempt 1 at 00:46:07
+40 verbose fetch to= /var/folders/mq/5k5nrdnn167dpjjnnbdkljpm0000gn/T/npm-1046-M5fhQB-Y/registry.npmjs.org/underscore.string/-/underscore.string-3.0.3.tgz
+41 http GET https://registry.npmjs.org/underscore.string/-/underscore.string-3.0.3.tgz
+42 http 200 https://registry.npmjs.org/underscore.string/-/underscore.string-3.0.3.tgz
+43 silly lockFile da5de1e2-ring-underscore-string-3-0-3-tgz https://registry.npmjs.org/underscore.string/-/underscore.string-3.0.3.tgz
+44 silly lockFile da5de1e2-ring-underscore-string-3-0-3-tgz https://registry.npmjs.org/underscore.string/-/underscore.string-3.0.3.tgz
+45 silly lockFile 076e3c44-underscore-string-3-0-3 underscore.string@3.0.3
+46 silly lockFile 076e3c44-underscore-string-3-0-3 underscore.string@3.0.3
+47 silly lockFile 827a2736-underscore-string underscore.string@
+48 silly lockFile 827a2736-underscore-string underscore.string@
+49 error Error: EACCES, mkdir '/Users/pyf/.npm/underscore.string/3.0.3'
+49 error  { [Error: EACCES, mkdir '/Users/pyf/.npm/underscore.string/3.0.3']
 49 error   errno: 3,
 49 error   code: 'EACCES',
-49 error   path: '/Users/pyf/.npm/underscore/1.8.3',
+49 error   path: '/Users/pyf/.npm/underscore.string/3.0.3',
 49 error   parent: 'nodejs-restaurant' }
 50 error Please try running this command again as root/Administrator.
 51 error System Darwin 14.1.0
-52 error command "node" "/usr/local/bin/npm" "install" "underscore" "--save"
+52 error command "node" "/usr/local/bin/npm" "install" "underscore.string" "--save"
 53 error cwd /Users/pyf/code/nodejs/nodejs-restaurant
 54 error node -v v0.10.32
 55 error npm -v 1.4.28
-56 error path /Users/pyf/.npm/underscore/1.8.3
+56 error path /Users/pyf/.npm/underscore.string/3.0.3
 57 error code EACCES
 58 error errno 3
-59 error stack Error: EACCES, mkdir '/Users/pyf/.npm/underscore/1.8.3'
+59 error stack Error: EACCES, mkdir '/Users/pyf/.npm/underscore.string/3.0.3'
 60 verbose exit [ 3, true ]

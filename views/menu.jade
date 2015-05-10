@@ -1,0 +1,29 @@
+extends layout
+block main
+    table.table.table-striped.table-bordered.table-hover
+        thead
+            tr
+                td id
+                td 菜名
+                td 描述
+                td 种类
+                td 价格
+                td 需要的积分
+                td 是否推荐
+        tbody
+            for menu in menus
+                tr(data-id="#{menu.id}")
+                    td #{menu.id}
+                    td #{menu.name}
+                    td #{menu.description}
+                    td #{menu.kind}
+                    td #{menu.price}
+                    td #{menu.creditprice}
+                    td #{menu.ifrecommend}
+
+block scripts
+
+    script(src="/js/mod/moment.js")
+    script(src="/js/mod/editable-cell.js")
+    script(src="/js/mod/map-pane.js")
+    script(src="/js/page/admin/index.js")

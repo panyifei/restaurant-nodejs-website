@@ -65,11 +65,16 @@ block content
               a(href='/admins')
                 i.fa.fa-search
                 span.nav-label 员工管理
-          //if currentUser.role == "管理员"
-          //  li(class=[title=="成员管理"?"active":""])
-          //    a(href='/member')
-          //      i.fa.fa-qrcode
-          //      span.nav-label 成员管理
+          if currentUser.role == "管理员"
+            li(class=[title=="菜单管理"?"active":""])
+              a(href='/menu')
+                i.fa.fa-qrcode
+                span.nav-label 菜单管理
+          if currentUser.role == "管理员"
+            li(class=[title=="用户管理"?"active":""])
+              a(href='/users')
+                i.fa.fa-star
+                span.nav-label 用户管理
           li(class=[title == "操作历史" ? "active" : ""])
               a(href='/log')
                 i.fa.fa-desktop
