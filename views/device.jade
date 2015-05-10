@@ -1,54 +1,5 @@
 extends layout
 block main
-    .ibox-content
-         .flot-chart
-            #flot-pie-chart.flot-chart-pie-content(style='padding: 0px; position: relative;')
-                canvas.base(width='200', height='200')
-                canvas.overlay(width='200', height='200', style='position: absolute; left: 0px; top: 0px;')
-                .legend
-                    div(style='position: absolute; width: 59px; height: 68px; top: 5px; right: 5px; opacity: 0.85; background-color: rgb(255, 255, 255);')
-                    table(style='position:absolute;top:5px;right:5px;;font-size:smaller;color:#545454')
-                        tbody
-                            tr
-                                td.legendColorBox
-                                    div(style='border:1px solid #ccc;padding:1px')
-                                        div(style='width:4px;height:0;border:5px solid #fff;overflow:hidden')
-                                td.legendLabel 待配置
-                            tr
-                                td.legendColorBox
-                                    div(style='border:1px solid #ccc;padding:1px')
-                                        div(style='width:4px;height:0;border:5px solid #fff;overflow:hidden')
-                                td.legendLabel 使用中
-                            tr
-                                td.legendColorBox
-                                    div(style='border:1px solid #ccc;padding:1px')
-                                        div(style='width:4px;height:0;border:5px solid #fff;overflow:hidden')
-                                td.legendLabel 已到货
-                            tr
-                                td.legendColorBox
-                                    div(style='border:1px solid #ccc;padding:1px')
-                                        div(style='width:4px;height:0;border:5px solid #fff;overflow:hidden')
-                                td.legendLabel 已发送
-                            tr
-                                td.legendColorBox
-                                    div(style='border:1px solid #ccc;padding:1px')
-                                        div(style='width:4px;height:0;border:5px solid #fff;overflow:hidden')
-                                td.legendLabel 已联系
-                            tr
-                                td.legendColorBox
-                                    div(style='border:1px solid #ccc;padding:1px')
-                                        div(style='width:4px;height:0;border:5px solid #fff;overflow:hidden')
-                                td.legendLabel 已配置
-                            tr
-                                td.legendColorBox
-                                    div(style='border:1px solid #ccc;padding:1px')
-                                        div(style='width:4px;height:0;border:5px solid #fff;overflow:hidden')
-                                td.legendLabel 问题设备
-                            tr
-                                td.legendColorBox
-                                    div(style='border:1px solid #ccc;padding:1px')
-                                        div(style='width:4px;height:0;border:5px solid #fff;overflow:hidden')
-                                td.legendLabel 已取回
     table.table.table-striped.table-bordered.table-hover
         thead
             tr

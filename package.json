@@ -22,8 +22,12 @@
   "dependencies": {
     "MD5": "^1.2.1",
     "body-parser": "^1.12.2",
+    "config": "^1.13.0",
+    "connect-redis": "^2.3.0",
     "express": "^4.12.2",
+    "express-session": "^1.11.1",
     "jade": "^1.9.2",
+    "js-yaml": "^3.3.0",
     "knex": "^0.7.6",
     "mysql": "^2.5.5",
     "passport": "^0.2.1",

@@ -35,30 +35,28 @@ block content
             .dropdown.profile-element
               span
                 img.img-circle(alt='image', src='img/a7.jpg', style="width:48px;height:48px")
-                p #{currentUser.Username}
+                p #{currentUser.name} #{currentUser.role}
               a.dropdown-toggle(data-toggle='dropdown', href='#')
                 span.clear
                   span.block.m-t-xs
                     //- strong.font-bold #{user.username}
                   a.text-muted.text-xs.block(href="/logout") 登出
-            .logo-element
-              | IN+
-          if currentUser.Role != "库存运营"
-            li(class=[title=="设备管理"?"active":""])
+          if currentUser.role == "订单运营"
+            li(class=[title=="订单管理"?"active":""])
               a(href='/device')
                 i.fa.fa-cogs
-                span.nav-label 设备管理
-          if currentUser.Role != "库存运营"
+                span.nav-label 订单管理
+          if currentUser.role == "管理员"
             li(class=[title=="签约商户管理"?"active":""])
               a(href='/shop')
                 i.fa.fa-group
                 span.nav-label 签约商户管理
-          if currentUser.Role != "库存运营"
+          if currentUser.role == "管理员"
             li(clas=[title=="商户批量查询"?"active":""])
               a(href='/shopbatch')
                 i.fa.fa-search
                 span.nav-label 商户批量查询
-          if currentUser.Role == "管理员"
+          if currentUser.role == "管理员"
             li(class=[title=="成员管理"?"active":""])
               a(href='/member')
                 i.fa.fa-qrcode

@@ -197,10 +197,13 @@ app.get("/login", routes.login);
 app.post("/login", passport.authenticate('local', {
     failureRedirect: '/login',
     failureFlash: true }), function (req, res, next) {
-    console.log(req.body.redir);
     res.redirect(req.body.redir || "/");
 });
 app.get("/logout", routes.logout);
+
+app.get("/",assureLogin, function(req,res){
+    res.redirect('/orders');
+});
 
 //管理员登录
 app.get('/orders',assureLogin, function(req, res){
@@ -208,8 +211,9 @@ app.get('/orders',assureLogin, function(req, res){
         orders = orders._settledValue;
 
         res.render("device", {
+            title: "订单管理",
             orders:orders,
-            currentUser:{Username:"w",Role:"管理员"},
+            currentUser:req.user,
             devices:{}
         });
 
