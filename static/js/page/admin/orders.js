@@ -3,7 +3,7 @@ $('#side-menu').metisMenu();
 //获取订单
 $.ajax({
     type: "post",
-    url: "ajax/getAllOrders",
+    url: "ajax/getOrdersByType",
     data: {
         type:type
     },
@@ -12,6 +12,7 @@ $.ajax({
         var orders = "";
         for(var l=0;l<res.length;l++){
             orders+="<tr class='c-order j-order' data-id='"+res[l].id+"' data-status='"+res[l].status+"'>";
+            orders+="<td>"+res[l].id+"</td>";
             orders+="<td>"+res[l].telephone+"</td>";
             orders+="<td>"+moment(res[l].addTime).format('YYYY-MM-DD')+"</td>";
             var orderarr = res[l].definition.split('/');

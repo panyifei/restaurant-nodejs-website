@@ -23,176 +23,8 @@ app.use(function(req,res,next){
     next();
 });
 
-//商家用来确认订单的页面
-app.get('/acceptorders', function(req, res){
-    var orders = db.select().table('order').exec(function(){
-        orders = orders._settledValue;
-
-        res.render("acceptorders", {
-            orders:orders
-        });
-
-    });
-});
-
-//商家获得某种情况的订单
-app.post("/ajax/getAllOrders",function(req,res){
-    var type = req.body.type;
-    var status = req.meta.order_type[type].text;
-    var orders = db.where({status:status}).select().table('order')
-        .exec(function(){
-        orders = orders._settledValue;
-        res.send(200,orders);
-    });
-});
-
-
-//商家接受订单状态
-app.post("/ajax/acceptOrder",function(req,res){
-    var id = req.body.id;
-    db('order')
-        .where('id', '=', id)
-        .where('status','=',"已提交")
-        .update({
-            status: '已接受'
-        }).exec(function (err,rows) {
-            if(rows===1){
-                res.send(200, "成功");
-            }else{
-                res.send(200, "对不起，此单已经被撤销，无法接受，请刷新页面~");
-            }
-
-        });
-});
-
-//商家撤销改单
-app.post("/ajax/cancelOrder",function(req,res){
-    var id = req.body.id;
-    db('order')
-        .where('id', '=', id)
-        .where('status','=',"已提交")
-        .update({
-            status: '已撤单'
-        }).exec(function (err,rows) {
-            if(rows===1){
-                res.send(200, "成功");
-            }else{
-                res.send(200, "对不起，此单已经被用户撤销");
-            }
-
-        });
-});
-
-//主页面
-//肉菜为1，素菜为2，饮品为3，小吃为4
-app.get('/main', function(req, res){
-    var menus = db.select().table('menu').exec(function(){
-        menus = menus._settledValue;
-
-        var users = db('user').where('id', 1).exec(function(){
-            users = users._settledValue;
-
-            var activitys = db.select().table('activity').exec(function(){
-                activitys = activitys._settledValue;
-
-                res.render("main", {
-                    menus:menus,
-                    users:users,
-                    activitys:activitys
-                });
-            });
-
-        });
-
-    });
-});
-
-//提交菜单
-app.post("/ajax/addOrder",function(req,res){
-    var telephone = req.body.telephone;
-    var definition = req.body.menus;
-    var total = req.body.total;
-    var creditused = req.body.creditused;
-    //这里需要判断一下是否点了，还有1个小时内只准点一次
-
-    if(total==0){
-        res.send(200, "对不起，请至少点一份~");
-    }else {
-
-        var orders = db('order')
-            .whereIn('telephone', [telephone])
-            .whereNotIn('status', ["已完结",'已撤单'])
-            .exec(function () {
-                orders = orders._settledValue;
-                if(orders.length!=0){
-                    res.send(200, "对不起，您今天有未完结的订单");
-                }else{
-                    db("order")
-                        .insert({
-                            telephone: telephone,
-                            addTime: new Date,
-                            definition: definition,
-                            total: total,
-                            creditused:creditused,
-                            status: '已提交'
-                        })
-                        .exec(function () {
-                            res.send(200, "已经成功提交~"+"您的消费金额为"+total+"消费积分为:"+creditused);
-                        });
-                }
-            });
-
-    }
-});
-
-//获得订单
-app.post("/ajax/getOrders",function(req,res){
-    var telephone = req.body.telephone;
-    var orders = db.where({telephone:telephone}).select().table('order').exec(function(){
-        orders = orders._settledValue;
-
-        res.send(200,orders);
-
-    });
-});
-
-//改变订单状态
-app.post("/ajax/changeOrder",function(req,res){
-    var id = req.body.id;
-    db('order')
-        .where('id', '=', id)
-        .where('status','=',"已提交")
-        .update({
-            status: '已撤单'
-        }).exec(function (err,rows) {
-            if(rows===1){
-                res.send(200, "已经成功取消订单");
-            }else{
-                res.send(200, "对不起，此单已经被接受，无法取消，请联系服务员~");
-            }
-
-        });
-});
-
-
-app.use(function (req, res, next) {
-    req.meta = {
-        order_type: require('./meta/order_type')
-    };
-    next();
-});
-
-//下面是需要登录的说法了
-function assureLogin(req, res, next) {
-    if (!req.user) {
-        return res.redirect("/login?redir=" + encodeURIComponent(req.path));
-    }
-    next();
-}
 //这里是密码的初始化
 require("./util/passport-init");
-
-//下面的还没有看
 var config = require('config');
 var session = require('express-session');
 var RedisStore = require('connect-redis')(session);
@@ -206,6 +38,36 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+//下面是需要登录的说法
+function assureLogin(req, res, next) {
+    if (!req.user) {
+        return res.redirect("/login?redir=" + encodeURIComponent(req.path));
+    }
+    next();
+}
+
+
+
+//商家的ajax
+//商家获得某种情况的订单
+app.post("/ajax/getOrdersByType",assureLogin,ajax.order.getOrdersByType);
+//商家接受订单状态
+app.post("/ajax/acceptOrder",assureLogin,ajax.order.acceptOrder);
+//商家撤销订单
+app.post("/ajax/cancelOrder",assureLogin,ajax.order.cancelOrder);
+
+
+//客户的ajax
+//提交菜单
+app.post("/ajax/addOrder",ajax.order.addOrder);
+//根据手机号获得订单
+app.post("/ajax/getOrders",ajax.order.getOrders);
+//改变订单状态
+app.post("/ajax/changeOrder",ajax.order.changeOrder);
+
+
+//登录和登出
 app.get("/login", routes.login);
 app.post("/login", passport.authenticate('local', {
     failureRedirect: '/login',
@@ -213,20 +75,15 @@ app.post("/login", passport.authenticate('local', {
     res.redirect(req.body.redir || "/");
 });
 app.get("/logout", routes.logout);
+app.get("/",assureLogin, routes.orders);
 
-app.get("/",assureLogin, function(req,res){
-    res.redirect('/orders');
-});
 
-//订单的4中情况都可以的
-app.get('/orders',assureLogin, function(req, res){
-    var type = req.query.type;
-    res.render("orders", {
-            type:type,
-            title: req.meta.order_type[type].key,
-            currentUser:req.user
-    });
-});
+//主页面
+//肉菜为1，素菜为2，饮品为3，小吃为4
+app.get('/main', routes.main);
+
+//商家这里的页面，需要登录
+app.get('/orders',assureLogin, routes.orders);
 
 app.listen(3000);
 console.log("server started at http://localhost:3000");
