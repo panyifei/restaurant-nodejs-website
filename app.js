@@ -210,8 +210,8 @@ app.get('/orders',assureLogin, function(req, res){
     var orders = db.select().table('order').exec(function(){
         orders = orders._settledValue;
 
-        res.render("device", {
-            title: "订单管理",
+        res.render("orders", {
+            title: "已提交订单",
             orders:orders,
             currentUser:req.user,
             devices:{}
