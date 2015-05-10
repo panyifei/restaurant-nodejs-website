@@ -1,0 +1,21 @@
+extends layout
+block main
+    table.table.table-striped.table-bordered.table-hover
+        thead
+            tr
+                td 活动id
+                td 主题
+                td 活动详细
+        tbody
+            for activity in activitys
+                tr(data-id="#{activity.id}")
+                    td #{activity.id}
+                    td #{activity.subject}
+                    td #{activity.detail}
+
+block scripts
+
+    script(src="/js/mod/moment.js")
+    script(src="/js/mod/editable-cell.js")
+    script(src="/js/mod/map-pane.js")
+    script(src="/js/page/admin/index.js")

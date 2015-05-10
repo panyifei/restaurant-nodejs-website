@@ -41,26 +41,25 @@ block content
                   span.block.m-t-xs
                     //- strong.font-bold #{user.username}
                   a.text-muted.text-xs.block(href="/logout") 登出
-          if currentUser.role == "订单运营"
-            li(class=[title=="已提交订单"||title=="已接受订单"||title=="已完结订单"||title=="已撤销订单"?"active":""])
-              a(href='#')
-                i.fa.fa-cogs
-                span.nav-label 订单管理
-                span.fa.arrow
-              ul.nav.nav-second-level.collapse
-                li(class=[title == "已提交订单" ? "active" : ""])
-                  a(href='/orders?type=0') 已提交
-                li(class=[title == "已接受订单" ? "active" : ""])
-                  a(href='/orders?type=1') 已接受
-                li(class=[title == "已完结订单" ? "active" : ""])
-                  a(href='/orders?type=2') 已完结
-                li(class=[title == "已撤销订单" ? "active" : ""])
-                  a(href='/orders?type=3') 已撤销
-          //if currentUser.role == "管理员"
-          //  li(class=[title=="签约商户管理"?"active":""])
-          //    a(href='/shop')
-          //      i.fa.fa-group
-          //      span.nav-label 签约商户管理
+          li(class=[title=="已提交订单"||title=="已接受订单"||title=="已完结订单"||title=="已撤销订单"?"active":""])
+            a(href='#')
+              i.fa.fa-cogs
+              span.nav-label 订单管理
+              span.fa.arrow
+            ul.nav.nav-second-level.collapse
+              li(class=[title == "已提交订单" ? "active" : ""])
+                a(href='/orders?type=0') 已提交
+              li(class=[title == "已接受订单" ? "active" : ""])
+                a(href='/orders?type=1') 已接受
+              li(class=[title == "已完结订单" ? "active" : ""])
+                a(href='/orders?type=2') 已完结
+              li(class=[title == "已撤销订单" ? "active" : ""])
+                a(href='/orders?type=3') 已撤销
+          if currentUser.role == "管理员"
+            li(class=[title=="活动管理"?"active":""])
+              a(href='/activity')
+                i.fa.fa-group
+                span.nav-label 活动管理
           //if currentUser.role == "管理员"
           //  li(clas=[title=="商户批量查询"?"active":""])
           //    a(href='/shopbatch')

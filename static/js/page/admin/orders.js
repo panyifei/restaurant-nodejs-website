@@ -90,5 +90,3 @@ $.ajax({
         //toastr.error('发生错误');
     }
 });
-
-//setTimeout("location.reload()",10000);
