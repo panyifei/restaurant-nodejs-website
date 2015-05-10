@@ -85,6 +85,7 @@ app.get('/main', routes.main);
 //商家这里的页面，需要登录
 app.get('/orders',assureLogin, routes.orders);
 app.get('/activity',assureLogin, routes.activity);
+app.get('/admins',assureLogin, routes.admins);
 
 app.listen(3000);
 console.log("server started at http://localhost:3000");

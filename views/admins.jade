@@ -1,0 +1,23 @@
+extends layout
+block main
+    table.table.table-striped.table-bordered.table-hover
+        thead
+            tr
+                td id
+                td 名字
+                td 密码
+                td 身份
+        tbody
+            for admin in admins
+                tr(data-id="#{admin.id}")
+                    td #{admin.id}
+                    td #{admin.name}
+                    td #{admin.password}
+                    td #{admin.role}
+
+block scripts
+
+    script(src="/js/mod/moment.js")
+    script(src="/js/mod/editable-cell.js")
+    script(src="/js/mod/map-pane.js")
+    script(src="/js/page/admin/index.js")

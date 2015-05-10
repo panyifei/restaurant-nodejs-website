@@ -60,11 +60,11 @@ block content
               a(href='/activity')
                 i.fa.fa-group
                 span.nav-label 活动管理
-          //if currentUser.role == "管理员"
-          //  li(clas=[title=="商户批量查询"?"active":""])
-          //    a(href='/shopbatch')
-          //      i.fa.fa-search
-          //      span.nav-label 商户批量查询
+          if currentUser.role == "管理员"
+            li(clas=[title=="员工管理"?"active":""])
+              a(href='/admins')
+                i.fa.fa-search
+                span.nav-label 员工管理
           //if currentUser.role == "管理员"
           //  li(class=[title=="成员管理"?"active":""])
           //    a(href='/member')
