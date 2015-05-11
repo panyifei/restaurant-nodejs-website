@@ -48,7 +48,6 @@ function assureLogin(req, res, next) {
 }
 
 
-
 //商家的ajax
 //商家获得某种情况的订单
 app.post("/ajax/getOrdersByType",assureLogin,ajax.order.getOrdersByType);

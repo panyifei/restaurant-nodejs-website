@@ -5,20 +5,27 @@ block main
             tr
                 td id
                 td 手机号
+                    i.fa.fa-pencil.c-edit
                 td 等级
+                    i.fa.fa-pencil.c-edit
                 td 现有积分
+                    i.fa.fa-pencil.c-edit
                 td 总共积分
+                    i.fa.fa-pencil.c-edit
                 td 性别
+                    i.fa.fa-pencil.c-edit
+                td 操作
         tbody
             for user in users
                 tr(data-id="#{user.id}")
                     td #{user.id}
-                    td #{user.telephone}
-                    td #{user.level}
-                    td #{user.creditnow}
-                    td #{user.creditall}
+                    td.editable(data-field="telephone") #{user.telephone}
+                    td.editable(data-field="level") #{user.level}
+                    td.editable(data-field="creditnow") #{user.creditnow}
+                    td.editable(data-field="creditall") #{user.creditall}
                     td.editable(data-field="sex") #{user.sex}
-
+                    td
+                        button.btn.btn-primary 删除
 block scripts
 
     script(src="/js/mod/moment.js")
