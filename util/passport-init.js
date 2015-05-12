@@ -1,4 +1,3 @@
-var md5 = require('MD5');
 var passport = require('passport');
 var User;
 var LocalStrategy = require('passport-local').Strategy;
