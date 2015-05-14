@@ -5,21 +5,29 @@ block main
             tr
                 td id
                 td 菜名
+                    i.fa.fa-pencil.c-edit
                 td 描述
+                    i.fa.fa-pencil.c-edit
                 td 种类
+                    i.fa.fa-pencil.c-edit
                 td 价格
+                    i.fa.fa-pencil.c-edit
                 td 需要的积分
+                    i.fa.fa-pencil.c-edit
                 td 是否推荐
+                    i.fa.fa-pencil.c-edit
         tbody
             for menu in menus
                 tr(data-id="#{menu.id}")
                     td #{menu.id}
-                    td #{menu.name}
-                    td #{menu.description}
-                    td #{menu.kind}
-                    td #{menu.price}
-                    td #{menu.creditprice}
-                    td #{menu.ifrecommend}
+                    td.editable(data-field="name") #{menu.name}
+                    td.editable(data-field="description") #{menu.description}
+                    td.editable(data-field="kind") #{menu.kind}
+                    td.editable(data-field="price") #{menu.price}
+                    td.editable(data-field="creditprice") #{menu.creditprice}
+                    td.editable(data-field="ifrecommend") #{menu.ifrecommend}
+                    td
+                        button.btn.btn-primary 删除
 
 block scripts
 
@@ -27,3 +35,4 @@ block scripts
     script(src="/js/mod/editable-cell.js")
     script(src="/js/mod/map-pane.js")
     script(src="/js/page/admin/index.js")
+    script(src="/js/page/admin/menu.js")

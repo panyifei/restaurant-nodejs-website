@@ -5,15 +5,22 @@ block main
             tr
                 td id
                 td 名字
+                    i.fa.fa-pencil.c-edit
                 td 密码
+                    i.fa.fa-pencil.c-edit
                 td 身份
+                    i.fa.fa-pencil.c-edit
+                td 操作
         tbody
             for admin in admins
                 tr(data-id="#{admin.id}")
                     td #{admin.id}
-                    td #{admin.name}
-                    td #{admin.password}
-                    td #{admin.role}
+                    td.editable(data-field="name") #{admin.name}
+                    td.editable(data-field="password") #{admin.password}
+                    td.editable(data-field="role") #{admin.role}
+                    td
+                        button.btn.btn-primary 删除
+
 
 block scripts
 
@@ -21,3 +28,4 @@ block scripts
     script(src="/js/mod/editable-cell.js")
     script(src="/js/mod/map-pane.js")
     script(src="/js/page/admin/index.js")
+    script(src="/js/page/admin/admins.js")

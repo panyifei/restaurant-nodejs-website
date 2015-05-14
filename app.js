@@ -58,6 +58,9 @@ app.post("/ajax/cancelOrder",assureLogin,ajax.order.cancelOrder);
 
 //商家的修改的ajax
 app.post("/ajax/users/:id/detail", assureLogin, ajax.users.update);
+app.post("/ajax/activity/:id/detail", assureLogin, ajax.activity.update);
+app.post("/ajax/admins/:id/detail", assureLogin, ajax.admins.update);
+app.post("/ajax/menu/:id/detail", assureLogin, ajax.menu.update);
 
 
 //客户的ajax
