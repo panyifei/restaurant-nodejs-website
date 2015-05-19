@@ -19,3 +19,20 @@ $(".editable").get().forEach(function (elem) {
         });
     });
 });
+//删除按钮的初始化
+$('.j-remove').click(function(){
+    var id = $(this).parents('tr').data('id');
+    $(this).addClass('j-re');
+    $.ajax({
+        type: "delete",
+        url: "/ajax/users/" + id + "/delete",
+        success: function () {
+            toastr.success("删除成功");
+            $('.j-re').parents('tr').remove();
+        },
+        error: function (xhr) {
+            $('.j-re').removeClass('j-re');
+            toastr.error(xhr.responseText);
+        }
+    });
+});

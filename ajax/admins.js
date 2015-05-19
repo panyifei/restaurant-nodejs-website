@@ -18,3 +18,22 @@ exports.update = function(req,res){
 
         });
 };
+
+exports.delete = function(req,res){
+    var id = req.params.id;
+
+    db('admin')
+        .where({
+            id: id
+        })
+        .del()
+        .exec(function (err,rows) {
+            if(rows===1){
+                res.send(200, "成功");
+            }else{
+                res.send(500, "对不起，删除失败");
+            }
+
+        });
+
+};

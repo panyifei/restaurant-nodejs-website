@@ -16,6 +16,7 @@ block main
                     i.fa.fa-pencil.c-edit
                 td 是否推荐
                     i.fa.fa-pencil.c-edit
+                td 操作
         tbody
             for menu in menus
                 tr(data-id="#{menu.id}")
@@ -27,7 +28,7 @@ block main
                     td.editable(data-field="creditprice") #{menu.creditprice}
                     td.editable(data-field="ifrecommend") #{menu.ifrecommend}
                     td
-                        button.btn.btn-primary 删除
+                        button.j-remove.btn.btn-primary 删除
 
 block scripts
 
