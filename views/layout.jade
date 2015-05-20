@@ -35,6 +35,12 @@ block content
       right: 10px;
       top: 10px;
     }
+    .c-button{
+      height: 35px;
+      width: 60px;
+      position: relative;
+      top: 15px;
+    }
   #wrapper
     nav.navbar-default.navbar-static-side(role='navigation')
       .sidebar-collapse
@@ -71,7 +77,7 @@ block content
           if currentUser.role == "管理员"
             li(class=[title=="员工管理"?"active":""])
               a(href='/admins')
-                i.fa.fa-search
+                i.fa.fa-windows
                 span.nav-label 员工管理
           if currentUser.role == "管理员"
             li(class=[title=="菜单管理"?"active":""])
@@ -81,7 +87,7 @@ block content
           if currentUser.role == "管理员"
             li(class=[title=="用户管理"?"active":""])
               a(href='/users')
-                i.fa.fa-star
+                i.fa.fa-user-md
                 span.nav-label 用户管理
           //li(class=[title == "操作历史" ? "active" : ""])
           //    a(href='/log')
@@ -90,8 +96,9 @@ block content
 
     #page-wrapper.gray-bg.dashbard-1
       .row.wrapper.border-bottom.white-bg.page-heading
-        .col-lg-10
+        .col-lg-4
           h2= title
+        block button
       .row
         .col-lg-12
           .ibox.float-e-margins

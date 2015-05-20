@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b21becac-af90-4745-905b-9fb5fc00a124" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/activity.jade" afterPath="$PROJECT_DIR$/views/activity.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/activity.js" afterPath="$PROJECT_DIR$/ajax/activity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/page/admin/activity.js" afterPath="$PROJECT_DIR$/static/js/page/admin/activity.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admins.jade" afterPath="$PROJECT_DIR$/views/admins.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/admins.js" afterPath="$PROJECT_DIR$/ajax/admins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/page/admin/admins.js" afterPath="$PROJECT_DIR$/static/js/page/admin/admins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/layout.jade" afterPath="$PROJECT_DIR$/views/layout.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/menu.jade" afterPath="$PROJECT_DIR$/views/menu.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/menu.js" afterPath="$PROJECT_DIR$/ajax/menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/page/admin/menu.js" afterPath="$PROJECT_DIR$/static/js/page/admin/menu.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/users.jade" afterPath="$PROJECT_DIR$/views/users.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/users.js" afterPath="$PROJECT_DIR$/ajax/users.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/page/admin/users.js" afterPath="$PROJECT_DIR$/static/js/page/admin/users.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nodejs-restaurant.iws" />
@@ -45,9 +33,16 @@
       <file leaf-file-name="orders.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/orders.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+            <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="420">
               <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-              <folding />
+              <folding>
+                <marker date="1431261082000" expanded="true" signature="20:322" placeholder="..." />
+                <marker date="1431261082000" expanded="true" signature="35:322" placeholder="..." />
+                <marker date="1431261082000" expanded="true" signature="96:299" placeholder="..." />
+                <marker date="1431261082000" expanded="true" signature="111:299" placeholder="..." />
+                <marker date="1431261082000" expanded="true" signature="329:539" placeholder="..." />
+                <marker date="1431261082000" expanded="true" signature="348:379" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,16 +52,59 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="675">
               <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
+              <folding>
+                <marker date="1432050943000" expanded="true" signature="20:1173" placeholder="..." />
+                <marker date="1432050943000" expanded="true" signature="35:1173" placeholder="..." />
+                <marker date="1432050943000" expanded="true" signature="96:544" placeholder="..." />
+                <marker date="1432050943000" expanded="true" signature="111:544" placeholder="..." />
+                <marker date="1432050943000" expanded="true" signature="152:197" placeholder="..." />
+                <marker date="1432050943000" expanded="true" signature="216:261" placeholder="..." />
+                <marker date="1432050943000" expanded="true" signature="280:325" placeholder="..." />
+                <marker date="1432050943000" expanded="true" signature="344:389" placeholder="..." />
+                <marker date="1432050943000" expanded="true" signature="408:456" placeholder="..." />
+                <marker date="1432050943000" expanded="true" signature="475:522" placeholder="..." />
+                <marker date="1432050943000" expanded="true" signature="558:1173" placeholder="..." />
+                <marker date="1432050943000" expanded="true" signature="1180:1389" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1155" max-vertical-offset="1650">
+              <caret line="77" column="53" selection-start-line="77" selection-start-column="53" selection-end-line="77" selection-end-column="53" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app.js">
+      <file leaf-file-name="skins.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/skins.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43438914" vertical-offset="843" max-vertical-offset="1650">
-              <caret line="69" column="58" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="5160">
+              <caret line="2" column="22" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admins.jade" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/admins.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.49612403" vertical-offset="483" max-vertical-offset="930">
+              <caret line="45" column="109" selection-start-line="45" selection-start-column="109" selection-end-line="45" selection-end-column="109" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.jade" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/layout.jade">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1238" max-vertical-offset="1680">
+              <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -77,7 +115,19 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="615">
               <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-              <folding />
+              <folding>
+                <marker date="1432050950000" expanded="true" signature="20:1031" placeholder="..." />
+                <marker date="1432050950000" expanded="true" signature="35:1031" placeholder="..." />
+                <marker date="1432050950000" expanded="true" signature="96:480" placeholder="..." />
+                <marker date="1432050950000" expanded="true" signature="111:480" placeholder="..." />
+                <marker date="1432050950000" expanded="true" signature="152:198" placeholder="..." />
+                <marker date="1432050950000" expanded="true" signature="217:262" placeholder="..." />
+                <marker date="1432050950000" expanded="true" signature="281:328" placeholder="..." />
+                <marker date="1432050950000" expanded="true" signature="347:394" placeholder="..." />
+                <marker date="1432050950000" expanded="true" signature="413:458" placeholder="..." />
+                <marker date="1432050950000" expanded="true" signature="494:1031" placeholder="..." />
+                <marker date="1432050950000" expanded="true" signature="1037:1247" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -127,7 +177,6 @@
         <option value="$PROJECT_DIR$/routes/login.js" />
         <option value="$PROJECT_DIR$/util/passport-init.js" />
         <option value="$PROJECT_DIR$/ajax/admin.js" />
-        <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/ajax/activity.js" />
         <option value="$PROJECT_DIR$/ajax/admins.js" />
@@ -138,9 +187,10 @@
         <option value="$PROJECT_DIR$/static/js/page/admin/admins.js" />
         <option value="$PROJECT_DIR$/static/js/page/admin/menu.js" />
         <option value="$PROJECT_DIR$/static/js/page/admin/users.js" />
-        <option value="$PROJECT_DIR$/views/admins.jade" />
         <option value="$PROJECT_DIR$/views/menu.jade" />
         <option value="$PROJECT_DIR$/views/users.jade" />
+        <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/views/admins.jade" />
       </list>
     </option>
   </component>
@@ -208,92 +258,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs-restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs-restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs-restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs-restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs-restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs-restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="page" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs-restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs-restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane />
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -646,12 +616,13 @@
       <workItem from="1431678055306" duration="166000" />
       <workItem from="1431954691819" duration="601000" />
       <workItem from="1432020718053" duration="572000" />
-      <workItem from="1432049603262" duration="1306000" />
+      <workItem from="1432049603262" duration="1434000" />
+      <workItem from="1432091255936" duration="1968000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98166000" />
+    <option name="totallyTimeSpent" value="100262000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -677,7 +648,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3561644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3561644" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -810,13 +781,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/skins.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="5160">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/animate.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="42795">
@@ -901,31 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1575">
-          <caret line="85" column="10" selection-start-line="85" selection-start-column="12" selection-end-line="88" selection-end-column="37" />
-          <folding>
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1431954863000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/passport/lib/middleware/authenticate.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3325792" vertical-offset="1503" max-vertical-offset="5250">
@@ -952,7 +891,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23504274" vertical-offset="0" max-vertical-offset="702">
           <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -967,7 +905,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47008547" vertical-offset="0" max-vertical-offset="702">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="39" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -975,7 +912,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="675">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="38" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -983,7 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -991,7 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53418803" vertical-offset="0" max-vertical-offset="702">
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -999,7 +933,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.081196584" vertical-offset="978" max-vertical-offset="1680">
           <caret line="69" column="30" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,7 +940,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53418803" vertical-offset="0" max-vertical-offset="702">
           <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1015,7 +947,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14957266" vertical-offset="0" max-vertical-offset="702">
           <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1023,7 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5927602" vertical-offset="173" max-vertical-offset="675">
           <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1031,7 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.25339368" vertical-offset="218" max-vertical-offset="660">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="38" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1039,7 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5927602" vertical-offset="143" max-vertical-offset="645">
           <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1047,7 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1028" max-vertical-offset="1470">
           <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1055,7 +982,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5927602" vertical-offset="143" max-vertical-offset="645">
           <caret line="27" column="25" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1063,15 +989,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.61085975" vertical-offset="0" max-vertical-offset="465">
           <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/admins.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49095023" vertical-offset="98" max-vertical-offset="555">
-          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1079,7 +996,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
           <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
-          <folding />
+          <folding>
+            <marker date="1431261082000" expanded="true" signature="20:322" placeholder="..." />
+            <marker date="1431261082000" expanded="true" signature="35:322" placeholder="..." />
+            <marker date="1431261082000" expanded="true" signature="96:299" placeholder="..." />
+            <marker date="1431261082000" expanded="true" signature="111:299" placeholder="..." />
+            <marker date="1431261082000" expanded="true" signature="329:539" placeholder="..." />
+            <marker date="1431261082000" expanded="true" signature="348:379" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1087,7 +1011,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="675">
           <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding />
+          <folding>
+            <marker date="1432050943000" expanded="true" signature="20:1173" placeholder="..." />
+            <marker date="1432050943000" expanded="true" signature="35:1173" placeholder="..." />
+            <marker date="1432050943000" expanded="true" signature="96:544" placeholder="..." />
+            <marker date="1432050943000" expanded="true" signature="111:544" placeholder="..." />
+            <marker date="1432050943000" expanded="true" signature="152:197" placeholder="..." />
+            <marker date="1432050943000" expanded="true" signature="216:261" placeholder="..." />
+            <marker date="1432050943000" expanded="true" signature="280:325" placeholder="..." />
+            <marker date="1432050943000" expanded="true" signature="344:389" placeholder="..." />
+            <marker date="1432050943000" expanded="true" signature="408:456" placeholder="..." />
+            <marker date="1432050943000" expanded="true" signature="475:522" placeholder="..." />
+            <marker date="1432050943000" expanded="true" signature="558:1173" placeholder="..." />
+            <marker date="1432050943000" expanded="true" signature="1180:1389" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1095,14 +1032,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="615">
           <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
-          <folding />
+          <folding>
+            <marker date="1432050950000" expanded="true" signature="20:1031" placeholder="..." />
+            <marker date="1432050950000" expanded="true" signature="35:1031" placeholder="..." />
+            <marker date="1432050950000" expanded="true" signature="96:480" placeholder="..." />
+            <marker date="1432050950000" expanded="true" signature="111:480" placeholder="..." />
+            <marker date="1432050950000" expanded="true" signature="152:198" placeholder="..." />
+            <marker date="1432050950000" expanded="true" signature="217:262" placeholder="..." />
+            <marker date="1432050950000" expanded="true" signature="281:328" placeholder="..." />
+            <marker date="1432050950000" expanded="true" signature="347:394" placeholder="..." />
+            <marker date="1432050950000" expanded="true" signature="413:458" placeholder="..." />
+            <marker date="1432050950000" expanded="true" signature="494:1031" placeholder="..." />
+            <marker date="1432050950000" expanded="true" signature="1037:1247" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43438914" vertical-offset="843" max-vertical-offset="1650">
-          <caret line="69" column="58" selection-start-line="69" selection-start-column="58" selection-end-line="69" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1650">
+          <caret line="77" column="53" selection-start-line="77" selection-start-column="53" selection-end-line="77" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/skins.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="5160">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1238" max-vertical-offset="1680">
+          <caret line="98" column="17" selection-start-line="98" selection-start-column="17" selection-end-line="98" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/admins.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49612403" vertical-offset="483" max-vertical-offset="930">
+          <caret line="45" column="109" selection-start-line="45" selection-start-column="109" selection-end-line="45" selection-end-column="109" />
           <folding />
         </state>
       </provider>
