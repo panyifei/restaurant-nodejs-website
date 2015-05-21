@@ -3,6 +3,7 @@ var app = express();
 var db = require("./connect").db;
 var bodyParser = require('body-parser');
 var passport = require('passport');
+var flash = require('connect-flash');
 
 app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
@@ -38,6 +39,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(flash());
 
 //下面是需要登录的说法
 function assureLogin(req, res, next) {

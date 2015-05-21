@@ -18,8 +18,7 @@ module.exports = require("./base")(TABLE, {
         return db.select("*")
             .from(TABLE)
             .where({
-                name: username,
-                password:password
+                name: username
             })
             .exec(function (err, rows) {
                 if (err) {

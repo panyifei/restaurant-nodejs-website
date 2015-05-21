@@ -12,7 +12,7 @@ passport.use(new LocalStrategy({
     User.verify(username, password, function(err, user){
         if(err){
             return done(null, false, {
-                message: err
+                message: "meiyou"
             });
         }
 
