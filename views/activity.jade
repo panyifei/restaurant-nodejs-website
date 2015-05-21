@@ -1,4 +1,6 @@
 extends layout
+block button
+    button.btn.btn-info.dim.btn-outline.c-button(type="button",data-toggle="modal",data-target="#addModal") 添加
 block main
     table.table.table-striped.table-bordered.table-hover
         thead
@@ -17,6 +19,26 @@ block main
                     td.editable(data-field="detail") #{activity.detail}
                     td
                         button.j-remove.btn.btn-primary 删除
+    #addModal.modal.inmodal.in(tabindex='-1', role='dialog', aria-hidden='true', style='display: none;')
+        .modal-dialog
+            .modal-content.animated.bounceInRight
+                .modal-header
+                    button.close(type='button', data-dismiss='modal')
+                        span(aria-hidden='true') ×
+                        span.sr-only Close
+                    i.fa.fa-plus-square.modal-icon
+                    h4.modal-title 添加新活动
+                    small.font-bold 输入主题和活动详细
+                .modal-body
+                    .form-group
+                        label 输入主题
+                        input.form-control(type='text',name='subject' ,placeholder='Enter subject')
+                    .form-group
+                        label 输入详细
+                        input.form-control(type='text',name='detail', placeholder='Enter detail')
+                .modal-footer
+                    button.btn.btn-white(type='button', data-dismiss='modal',style="margin-bottom: 0px; ") 取消
+                    button.j-add.btn.btn-primary(type='button', data-dismiss='modal') 添加
 block scripts
 
     script(src="/js/mod/moment.js")

@@ -38,3 +38,24 @@ exports.delete = function(req,res){
         });
 
 };
+
+exports.add = function(req,res){
+
+    var subject = req.body.subject;
+    var detail = req.body.detail;
+
+    db('activity')
+        .insert({
+            subject: subject,
+            detail: detail
+        })
+        .exec(function (err,array) {
+            if(array.length===1){
+                res.send(200, "成功");
+            }else{
+                res.send(500, "对不起，删除失败");
+            }
+
+        });
+
+};

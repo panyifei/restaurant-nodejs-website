@@ -69,6 +69,10 @@ app.delete("/ajax/activity/:id/delete", assureLogin, ajax.activity.delete);
 app.delete("/ajax/admins/:id/delete", assureLogin, ajax.admins.delete);
 app.delete("/ajax/menu/:id/delete", assureLogin, ajax.menu.delete);
 
+//添加的ajax
+app.put("/ajax/admins/add", assureLogin, ajax.admins.add);
+app.put("/ajax/activity/add", assureLogin, ajax.activity.add);
+
 //客户的ajax
 //提交菜单
 app.post("/ajax/addOrder",ajax.order.addOrder);

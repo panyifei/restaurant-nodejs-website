@@ -37,3 +37,25 @@ $('.j-remove').click(function(){
         }
     });
 });
+
+
+//添加按钮
+$('.j-add').click(function(){
+    var subject = $('input[name=subject]').val();
+    var detail = $('input[name=detail]').val();
+
+    $.ajax({
+        type: "put",
+        url: "/ajax/activity/add",
+        data:{
+            subject:subject,
+            detail:detail
+        },
+        success: function () {
+            toastr.success("添加成功，请刷新页面查看");
+        },
+        error: function (xhr) {
+            toastr.error(xhr.responseText);
+        }
+    });
+});

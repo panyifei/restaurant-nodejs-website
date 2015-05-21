@@ -38,3 +38,26 @@ $('.j-remove').click(function(){
         }
     });
 });
+
+//添加按钮
+$('.j-add').click(function(){
+    var name = $('input[name=name]').val();
+    var password = $('input[name=password]').val();
+    var role = $('input[name=role]').val();
+    $.ajax({
+        type: "put",
+        url: "/ajax/admins/add",
+        data:{
+            name:name,
+            password:password,
+            role:role
+        },
+        success: function () {
+            toastr.success("添加成功，请刷新页面查看");
+
+        },
+        error: function (xhr) {
+            toastr.error(xhr.responseText);
+        }
+    });
+});

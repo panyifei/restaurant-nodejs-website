@@ -35,16 +35,16 @@ block main
                 .modal-body
                     .form-group
                         label 输入用户名
-                        input.form-control(type='text', placeholder='Enter your name')
+                        input.form-control(type='text',name='name' ,placeholder='Enter your name')
                     .form-group
                         label 输入密码
-                        input.form-control(type='password', placeholder='Enter your password')
+                        input.form-control(type='password',name='password', placeholder='Enter your password')
                     .form-group
                         label 输入角色
-                        input.form-control(type='text', placeholder='Enter your role')
+                        input.form-control(type='text',name='role', placeholder='Enter your role')
                 .modal-footer
                     button.btn.btn-white(type='button', data-dismiss='modal',style="margin-bottom: 0px; ") 取消
-                    button.btn.btn-primary(type='button') 添加
+                    button.j-add.btn.btn-primary(type='button', data-dismiss='modal') 添加
 
 
 block scripts
