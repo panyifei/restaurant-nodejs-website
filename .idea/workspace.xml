@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b21becac-af90-4745-905b-9fb5fc00a124" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/activity.jade" afterPath="$PROJECT_DIR$/views/activity.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/activity.js" afterPath="$PROJECT_DIR$/ajax/activity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/page/admin/activity.js" afterPath="$PROJECT_DIR$/static/js/page/admin/activity.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/admins.jade" afterPath="$PROJECT_DIR$/views/admins.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/admins.js" afterPath="$PROJECT_DIR$/ajax/admins.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/page/admin/admins.js" afterPath="$PROJECT_DIR$/static/js/page/admin/admins.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/menu.jade" afterPath="$PROJECT_DIR$/views/menu.jade" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ajax/menu.js" afterPath="$PROJECT_DIR$/ajax/menu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/js/page/admin/menu.js" afterPath="$PROJECT_DIR$/static/js/page/admin/menu.js" />
     </list>
     <ignored path="nodejs-restaurant.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,31 +51,28 @@
       <file leaf-file-name="menu.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/menu.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="675">
-              <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-              <folding>
-                <marker date="1432050943000" expanded="true" signature="20:1173" placeholder="..." />
-                <marker date="1432050943000" expanded="true" signature="35:1173" placeholder="..." />
-                <marker date="1432050943000" expanded="true" signature="96:544" placeholder="..." />
-                <marker date="1432050943000" expanded="true" signature="111:544" placeholder="..." />
-                <marker date="1432050943000" expanded="true" signature="152:197" placeholder="..." />
-                <marker date="1432050943000" expanded="true" signature="216:261" placeholder="..." />
-                <marker date="1432050943000" expanded="true" signature="280:325" placeholder="..." />
-                <marker date="1432050943000" expanded="true" signature="344:389" placeholder="..." />
-                <marker date="1432050943000" expanded="true" signature="408:456" placeholder="..." />
-                <marker date="1432050943000" expanded="true" signature="475:522" placeholder="..." />
-                <marker date="1432050943000" expanded="true" signature="558:1173" placeholder="..." />
-                <marker date="1432050943000" expanded="true" signature="1180:1389" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="0.0" vertical-offset="621" max-vertical-offset="1185">
+              <caret line="62" column="72" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="72" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="menu.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/js/page/admin/menu.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1140">
+              <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="1710">
-              <caret line="73" column="56" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
+            <state vertical-scroll-proportion="0.6081081" vertical-offset="825" max-vertical-offset="1725">
+              <caret line="73" column="48" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -90,16 +83,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="990">
               <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/activity.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.527027" vertical-offset="321" max-vertical-offset="795">
-              <caret line="37" column="95" selection-start-line="37" selection-start-column="95" selection-end-line="37" selection-end-column="95" />
               <folding />
             </state>
           </provider>
@@ -187,20 +170,20 @@
         <option value="$PROJECT_DIR$/routes/login.js" />
         <option value="$PROJECT_DIR$/util/passport-init.js" />
         <option value="$PROJECT_DIR$/ajax/admin.js" />
-        <option value="$PROJECT_DIR$/ajax/menu.js" />
         <option value="$PROJECT_DIR$/ajax/users.js" />
-        <option value="$PROJECT_DIR$/static/js/page/admin/menu.js" />
         <option value="$PROJECT_DIR$/static/js/page/admin/users.js" />
-        <option value="$PROJECT_DIR$/views/menu.jade" />
         <option value="$PROJECT_DIR$/views/users.jade" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/static/js/page/admin/admins.js" />
         <option value="$PROJECT_DIR$/ajax/admins.js" />
         <option value="$PROJECT_DIR$/views/admins.jade" />
         <option value="$PROJECT_DIR$/static/js/page/admin/activity.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/ajax/activity.js" />
         <option value="$PROJECT_DIR$/views/activity.jade" />
+        <option value="$PROJECT_DIR$/ajax/menu.js" />
+        <option value="$PROJECT_DIR$/views/menu.jade" />
+        <option value="$PROJECT_DIR$/static/js/page/admin/menu.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -346,20 +329,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs-restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nodejs-restaurant" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ajax" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -722,16 +691,16 @@
       <workItem from="1432020718053" duration="572000" />
       <workItem from="1432049603262" duration="1434000" />
       <workItem from="1432091255936" duration="2023000" />
-      <workItem from="1432176948605" duration="1286000" />
+      <workItem from="1432176948605" duration="2075000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="101603000" />
+    <option name="totallyTimeSpent" value="102392000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -753,7 +722,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35519126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35519126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1013,13 +982,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ajax/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53418803" vertical-offset="0" max-vertical-offset="702">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ajax/order.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.081196584" vertical-offset="978" max-vertical-offset="1680">
@@ -1038,13 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14957266" vertical-offset="0" max-vertical-offset="702">
           <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/page/admin/menu.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5927602" vertical-offset="143" max-vertical-offset="645">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -1073,27 +1028,6 @@
             <marker date="1431261082000" expanded="true" signature="111:299" placeholder="..." />
             <marker date="1431261082000" expanded="true" signature="329:539" placeholder="..." />
             <marker date="1431261082000" expanded="true" signature="348:379" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/menu.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="122" max-vertical-offset="675">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-          <folding>
-            <marker date="1432050943000" expanded="true" signature="20:1173" placeholder="..." />
-            <marker date="1432050943000" expanded="true" signature="35:1173" placeholder="..." />
-            <marker date="1432050943000" expanded="true" signature="96:544" placeholder="..." />
-            <marker date="1432050943000" expanded="true" signature="111:544" placeholder="..." />
-            <marker date="1432050943000" expanded="true" signature="152:197" placeholder="..." />
-            <marker date="1432050943000" expanded="true" signature="216:261" placeholder="..." />
-            <marker date="1432050943000" expanded="true" signature="280:325" placeholder="..." />
-            <marker date="1432050943000" expanded="true" signature="344:389" placeholder="..." />
-            <marker date="1432050943000" expanded="true" signature="408:456" placeholder="..." />
-            <marker date="1432050943000" expanded="true" signature="475:522" placeholder="..." />
-            <marker date="1432050943000" expanded="true" signature="558:1173" placeholder="..." />
-            <marker date="1432050943000" expanded="true" signature="1180:1389" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1159,26 +1093,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/js/page/admin/admins.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.054054055" vertical-offset="576" max-vertical-offset="1020">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="62" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/js/page/admin/activity.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="501" max-vertical-offset="990">
           <caret line="54" column="43" selection-start-line="54" selection-start-column="43" selection-end-line="54" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="1710">
-          <caret line="73" column="56" selection-start-line="73" selection-start-column="56" selection-end-line="73" selection-end-column="56" />
           <folding />
         </state>
       </provider>
@@ -1191,6 +1109,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ajax/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5608108" vertical-offset="531" max-vertical-offset="1065">
+          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/activity.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.033783782" vertical-offset="0" max-vertical-offset="795">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ajax/activity.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="546" max-vertical-offset="990">
@@ -1199,10 +1133,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/activity.jade">
+    <entry file="file://$PROJECT_DIR$/static/js/page/admin/admins.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.527027" vertical-offset="321" max-vertical-offset="795">
-          <caret line="37" column="95" selection-start-line="37" selection-start-column="95" selection-end-line="37" selection-end-column="95" />
+        <state vertical-scroll-proportion="0.054054055" vertical-offset="576" max-vertical-offset="1020">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="62" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/menu.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="621" max-vertical-offset="1185">
+          <caret line="62" column="72" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/page/admin/menu.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="576" max-vertical-offset="1140">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6081081" vertical-offset="825" max-vertical-offset="1725">
+          <caret line="73" column="48" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
           <folding />
         </state>
       </provider>

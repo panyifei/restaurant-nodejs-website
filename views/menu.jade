@@ -1,4 +1,6 @@
 extends layout
+block button
+    button.btn.btn-info.dim.btn-outline.c-button(type="button",data-toggle="modal",data-target="#addModal") 添加
 block main
     table.table.table-striped.table-bordered.table-hover
         thead
@@ -30,6 +32,38 @@ block main
                     td
                         button.j-remove.btn.btn-primary 删除
 
+    #addModal.modal.inmodal.in(tabindex='-1', role='dialog', aria-hidden='true', style='display: none;')
+        .modal-dialog
+            .modal-content.animated.bounceInRight
+                .modal-header
+                    button.close(type='button', data-dismiss='modal')
+                        span(aria-hidden='true') ×
+                        span.sr-only Close
+                    i.fa.fa-plus-square.modal-icon
+                    h4.modal-title 添加新菜品
+                    small.font-bold 输入菜品名字，描述，种类，价格，兑换积分和是否推荐
+                .modal-body
+                    .form-group
+                        label 输入菜名
+                        input.form-control(type='text',name='name' ,placeholder='Enter menu name')
+                    .form-group
+                        label 输入描述
+                        input.form-control(type='text',name='description', placeholder='Enter menu description')
+                    .form-group
+                        label 输入种类(荤菜为1，素菜为2，饮品为3，饮料为4)
+                        input.form-control(type='text',name='kind', placeholder='Enter menu kind')
+                    .form-group
+                        label 输入价格
+                        input.form-control(type='text',name='price', placeholder='Enter menu price')
+                    .form-group
+                        label 输入兑换所需积分
+                        input.form-control(type='text',name='creditprice', placeholder='Enter menu credit price')
+                    .form-group
+                        label 输入是否推荐（分为“推荐”和“不推荐”）
+                        input.form-control(type='text',name='ifrecommend', placeholder='Enter if recommend')
+                .modal-footer
+                    button.btn.btn-white(type='button', data-dismiss='modal',style="margin-bottom: 0px; ") 取消
+                    button.j-add.btn.btn-primary(type='button', data-dismiss='modal') 添加
 block scripts
 
     script(src="/js/mod/moment.js")

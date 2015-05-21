@@ -71,6 +71,7 @@ app.delete("/ajax/menu/:id/delete", assureLogin, ajax.menu.delete);
 
 //添加的ajax
 app.put("/ajax/admins/add", assureLogin, ajax.admins.add);
+app.put("/ajax/menu/add", assureLogin, ajax.menu.add);
 app.put("/ajax/activity/add", assureLogin, ajax.activity.add);
 
 //客户的ajax
