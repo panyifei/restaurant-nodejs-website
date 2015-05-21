@@ -55,6 +55,8 @@ function assureLogin(req, res, next) {
 app.post("/ajax/getOrdersByType",assureLogin,ajax.order.getOrdersByType);
 //商家接受订单状态
 app.post("/ajax/acceptOrder",assureLogin,ajax.order.acceptOrder);
+//商家确认订单支付
+app.post("/ajax/payOrder",assureLogin,ajax.order.payOrder);
 //商家撤销订单
 app.post("/ajax/cancelOrder",assureLogin,ajax.order.cancelOrder);
 

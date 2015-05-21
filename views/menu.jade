@@ -18,6 +18,8 @@ block main
                     i.fa.fa-pencil.c-edit
                 td 是否推荐
                     i.fa.fa-pencil.c-edit
+                td  图片地址
+                    i.fa.fa-pencil.c-edit
                 td 操作
         tbody
             for menu in menus
@@ -29,6 +31,7 @@ block main
                     td.editable(data-field="price") #{menu.price}
                     td.editable(data-field="creditprice") #{menu.creditprice}
                     td.editable(data-field="ifrecommend") #{menu.ifrecommend}
+                    td.editable(data-field="picture") #{menu.picture}
                     td
                         button.j-remove.btn.btn-primary 删除
 

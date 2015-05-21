@@ -37,7 +37,7 @@ html(lang="en")
                 for menu in menus
                     .c-item.clearfix.j-item(data-id="#{menu.id}",data-name="#{menu.name}",data-kind="#{menu.kind}",data-price="#{menu.price}",data-credit="#{menu.creditprice}",data-ifrecommend="#{menu.ifrecommend}")
                         .c-picture
-                            img.c-img(src="http://a0.att.hudong.com/80/22/01300000164151121168225892321.jpg")
+                            img.c-img(src="#{menu.picture}")
                         .c-food
                             h2 #{menu.name}
                             h3 #{menu.description}
@@ -85,7 +85,7 @@ html(lang="en")
                 for user in users
                     .j-user-info(data-level="#{user.level}",data-creditnow="#{user.creditnow}")
                         p.c-user-info
-                            img.c-user-img(src="http://a0.att.hudong.com/80/22/01300000164151121168225892321.jpg")
+                            img.c-user-img(src="#{user.picture}")
                             span.c-user-tele #{user.telephone}
                             span.c-user-level Level #{user.level}
                         .c-division

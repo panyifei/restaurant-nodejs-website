@@ -14,6 +14,8 @@ block main
                     i.fa.fa-pencil.c-edit
                 td 性别
                     i.fa.fa-pencil.c-edit
+                td 头像
+                    i.fa.fa-pencil.c-edit
                 td 操作
         tbody
             for user in users
@@ -24,6 +26,7 @@ block main
                     td.editable(data-field="creditnow") #{user.creditnow}
                     td.editable(data-field="creditall") #{user.creditall}
                     td.editable(data-field="sex") #{user.sex}
+                    td.editable(data-field="picture") #{user.picture}
                     td
                         button.j-remove.btn.btn-primary 删除
 block scripts
