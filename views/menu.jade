@@ -53,7 +53,7 @@ block main
                         label 输入描述
                         input.form-control(type='text',name='description', placeholder='Enter menu description')
                     .form-group
-                        label 输入种类(荤菜为1，素菜为2，饮品为3，饮料为4)
+                        label 输入种类(荤菜为1，素菜为2，饮品为3，主食为4)
                         input.form-control(type='text',name='kind', placeholder='Enter menu kind')
                     .form-group
                         label 输入价格
@@ -64,6 +64,9 @@ block main
                     .form-group
                         label 输入是否推荐（推荐为1，不推荐为2）
                         input.form-control(type='text',name='ifrecommend', placeholder='Enter if recommend')
+                    .form-group
+                        label 输入图片的URL
+                        input.form-control(type='text',name='picture', placeholder='Enter picture url')
                 .modal-footer
                     button.btn.btn-white(type='button', data-dismiss='modal',style="margin-bottom: 0px; ") 取消
                     button.j-add.btn.btn-primary(type='button', data-dismiss='modal') 添加

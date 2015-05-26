@@ -47,7 +47,7 @@ $('.j-add').click(function(){
     var price = $('input[name=price]').val();
     var creditprice = $('input[name=creditprice]').val();
     var ifrecommend = $('input[name=ifrecommend]').val();
-
+    var picture = $('input[name=picture]').val();
 
     $.ajax({
         type: "put",
@@ -58,7 +58,8 @@ $('.j-add').click(function(){
             kind:kind,
             price:price,
             creditprice:creditprice,
-            ifrecommend:ifrecommend
+            ifrecommend:ifrecommend,
+            picture:picture
         },
         success: function () {
             toastr.success("添加成功，请刷新页面查看");

@@ -45,6 +45,7 @@ exports.add = function(req,res){
     var price = req.body.price;
     var creditprice = req.body.creditprice;
     var ifrecommend = req.body.ifrecommend;
+    var picture = req.body.picture;
     db('menu')
         .insert({
             name: name,
@@ -52,7 +53,8 @@ exports.add = function(req,res){
             kind: kind,
             price:price,
             creditprice:creditprice,
-            ifrecommend:ifrecommend
+            ifrecommend:ifrecommend,
+            picture:picture
         })
         .exec(function (err,array) {
             if(array.length===1){
