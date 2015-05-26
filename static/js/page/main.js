@@ -95,11 +95,12 @@ $('.j-orders-foot').click(function(){
     $(this).addClass('c-foot-chosen').siblings().removeClass('c-foot-chosen');
     $('.j-show-orders').removeClass('hide').siblings().addClass('hide');
     $('.j-orders-header').removeClass('hide').siblings().addClass('hide');
+    var telephone = $('.j-user-info').data('telephone');
     $.ajax({
         type: "post",
         url: "ajax/getOrders",
         data: {
-            telephone: '13121310'
+            telephone: telephone
         },
         success: function (res) {
             if(res.length==0){
@@ -191,6 +192,7 @@ $(".j-submit-btn").click(function(){
     var total = 0;
     var creditused = 0;
     var num;
+    var telephone = $('.j-user-info').data('telephone');
     while(i<length){
         num = $($('.j-chosen .j-item')[i]).find("input").attr("value");
         menus += $($('.j-chosen .j-item')[i]).data("id");
@@ -226,7 +228,7 @@ $(".j-submit-btn").click(function(){
         type: "post",
         url: "ajax/addOrder",
         data: {
-            telephone: '13121310',
+            telephone: telephone,
             menus:menus,
             total:total,
             creditused:creditused

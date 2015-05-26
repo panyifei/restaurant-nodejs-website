@@ -83,7 +83,7 @@ html(lang="en")
 
             .j-show-mine.hide
                 for user in users
-                    .j-user-info(data-level="#{user.level}",data-creditnow="#{user.creditnow}")
+                    .j-user-info(data-level="#{user.level}",data-telephone="#{user.telephone}",data-creditnow="#{user.creditnow}")
                         p.c-user-info
                             img.c-user-img(src="#{user.picture}")
                             span.c-user-tele #{user.telephone}

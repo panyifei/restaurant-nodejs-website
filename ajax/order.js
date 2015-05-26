@@ -41,15 +41,15 @@ exports.payOrder = function(req,res){
                     users = users._settledValue;
                     var order = db('order').where('id', id).exec(function(){
                         order = order._settledValue;
-                        users[0].creditnow = users[0].creditnow + order[0].creditused;
-                        users[0].creditall = users[0].creditall + order[0].creditused;
-                        if(users[0].creditall>300){
+                        users[0].creditnow = users[0].creditnow - order[0].creditused + order[0].total*10;
+                        users[0].creditall = users[0].creditall + order[0].total*10;
+                        if(users[0].creditall > 3000){
                             users[0].level = 5;
-                        }else if(users[0].creditall>1500){
+                        }else if(users[0].creditall > 1500){
                             users[0].level = 4;
-                        }else if(users[0].creditall>500){
+                        }else if(users[0].creditall > 500){
                             users[0].level = 3;
-                        }else if(users[0].creditall>100){
+                        }else if(users[0].creditall > 100){
                             users[0].level = 2;
                         }else{
                             users[0].level = 1;
